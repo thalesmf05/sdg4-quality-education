@@ -1,3 +1,28 @@
+/* NavBar
+   Author: Thales
+*/
+.links-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+.links-nav li {
+	padding: 13px;
+}
+.spacer-top-body{
+	margin-top: 4rem;
+}
+
+@media(max-width:750px){
+	.links-nav{
+		display: none;
+	}
+}
+
+
 /*Author: Thales*/
 
 /*CSS for campaing page*/
@@ -19,6 +44,7 @@ Sources: https://www.w3schools.com/howto/howto_css_zoom_hover.asp and https://yo
 	transform: scale(1.1);
 }
 /*End img effect*/
+
 
 /*Spacers for images*/
 .spacer-left-campaings{

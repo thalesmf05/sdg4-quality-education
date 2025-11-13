@@ -7,8 +7,62 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <div class="container margin-et">
+  <body>	
+  
+	<!-- NavBar -->
+	<nav class="navbar bg-body-tertiary sticky-top">
+	
+		<div class="container-fluid">
+			<!-- Logo -->
+			<a class="navbar-brand" href="#"><img src="img/placeHolder/placeHolder_mainCampaings.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+			Bootstrap</a>
+			
+			<!-- Links centered in the navbar -->
+			<ul class="links-nav">
+				<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Link 3</a></li>
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown link</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Action</a></li>
+						<li><a class="dropdown-item" href="#">Another action</a></li>
+						<li><a class="dropdown-item" href="#">Something else here</a></li>
+					</ul>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#">Link 4</a></li>
+				
+			</ul>
+			
+			<!-- Toggle Button -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+				<!-- Header and logo toggle button -->
+				<div class="offcanvas-header">
+					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<!-- Content in the toggle button -->
+				<div class="offcanvas-body">
+					<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+						<li class="nav-item"><a class="nav-link"  href="#">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">About SDG 4</a></li>
+						<li class="nav-item"><a class="nav-link"  href="#">Targets</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Education challenge</a></li>
+						<li class="nav-item"><a class="nav-link"  href="#">Campaings</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Stories</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Get </a></li>
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+	</nav>
+
+    <div class="container spacer-top-body">
 		<div class="row"> <!--Heading, one colum-->
 			<div class="col-sm-12"> 
 				<h1>Campaing around the world</h1>
