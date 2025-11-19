@@ -1,3 +1,19 @@
+/*Google fonts*/
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 /* NavBar
    Author: Thales
 */
@@ -8,6 +24,9 @@
   margin: 0;
   padding: 0;
   justify-content: center;
+}
+.links-nav a, .links-nav ul a{
+	font-size: 20px;
 }
 .links-nav li {
 	padding: 13px;
@@ -23,9 +42,8 @@
 }
 
 
-/*Author: Thales*/
-
-/*CSS for campaing page*/
+/*	CSS for campaing page
+	Author: Thales*/
 
 /*Hover zoom img effect
 Sources: https://www.w3schools.com/howto/howto_css_zoom_hover.asp and https://youtube.com/shorts/-4PtUNKZr8M?si=-x04MyQYTLYg2XLB */
@@ -61,7 +79,7 @@ Sources: https://youtu.be/Si4ViAvvnwU?si=R38BF-6bvPxQ2DKY and https://www.w3scho
 	position: relative;	
 }
 .text-inside-img{
-	position: absolute; 
+	position: absolute;
 	bottom: 5%;
 	color: black;
 	padding-left: 40px;
@@ -71,4 +89,24 @@ Sources: https://youtu.be/Si4ViAvvnwU?si=R38BF-6bvPxQ2DKY and https://www.w3scho
 }
 .text-inside-img h3 {
 	font-size: 35px;
+}
+
+
+/*	CSS for Education Challenges
+	Author: Thales*/
+.bg-img{
+	background-image: url("../img/background/backgroundEdChallenges.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 100vh; /**covers 100% of the screen*/
+	width: 100%;
+}
+.background-txt-t{
+	color: white;
+	padding-top: 33%;
+}
+
+.background-txt-t h1{
+	font-size: 60px;
 }
