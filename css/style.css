@@ -9,10 +9,10 @@
 .open-sans {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 400;
   font-style: normal;
   font-variation-settings:
-    "wdth" 100;
+    "width" 100;
 }
 
 
@@ -37,12 +37,24 @@
 	margin-top: 4rem;
 }
 
+/*scrolling effect navbar*/
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*When user scrolls more than 56px change the color*/
+.navbar-scrolled {
+  background-color: rgba(200, 200, 200, 0.97); /* darker gray for contrast */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
 @media(max-width:750px){
 	.links-nav{
 		display: none;
 	}
 }
-
+/*End navbar*/
 
 /*	CSS for campaing page
 	Author: Thales*/
@@ -67,10 +79,10 @@ Sources: https://www.w3schools.com/howto/howto_css_zoom_hover.asp and https://yo
 
 
 /*Spacers for images*/
-.spacer-left-campaings{
+.spacer-left-campaigns{
 	padding-left: 20px;
 }
-.spacer-bellow-campaings{
+.spacer-bellow-campaigns{
 	padding-bottom: 20px;
 }
 
@@ -99,7 +111,7 @@ Sources: https://youtu.be/Si4ViAvvnwU?si=R38BF-6bvPxQ2DKY and https://www.w3scho
 
 /*background image and text*/
 .bg-img-t{
-	background-image: url("../img/background/backgroundEdChallenges.jpg");
+	background-image: url("../img/thales/background/backgroundEdChallenges.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -125,3 +137,538 @@ Sources: https://youtu.be/Si4ViAvvnwU?si=R38BF-6bvPxQ2DKY and https://www.w3scho
 	width: 100%;
 	height: 400px;
 }	
+
+
+/*Stories page
+Author: Savio Miano*/
+.hero-placeholder {
+    height: 350px;
+    border-radius: 4px; 
+}
+
+.card-placeholder {
+    height: 200px;
+    border-radius: 4px;
+}
+
+
+
+/** CSS for Rubia's Pages**/
+.aboutsdr_r {
+	background-color: white;
+	color: #2A140E;
+}
+
+.cabecalho {
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+}
+
+/** banner_sdg_r **/
+
+.img_top_sdg_r {
+	background-image: url("../img/rubia/library.jpg");
+	width: 100%;
+	height: 60vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: height 0.5s ease;
+	margin: 0 auto;
+	position: relative;
+	/**overflow: hidden; /** hide the content that gets over of the limit **/
+	/**height: 240px;**/
+	/**max-height: 280px;**/
+	/**object-fit: cover; /** ajusta a imagem se precisar preencher, ou seja, se necessário ele corta **/
+	/**opacity: 0.6; **//** vai de 0 a 1 **/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/**height: 100dvh; **//** ocupa a altura total da tela , diferenca entre vh e dvh? tava vh e eu troquei p dvh	**/
+	/**background-color: black;**/
+	vertical-align: flex-start;
+	margin-bottom: 30px;
+	transition: 25vh;
+}
+
+.shrink-banner {
+	height: 25vh !important;
+}
+
+.img_top_sdg_r.shrink-banner h1, .img_top_sdg_r.shrink-banner h2 {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+
+
+
+.banner_sdg_r img {
+	width: 100%; /** to assure the image is going to complete all the space **/
+	display: block; /** to remove extra spaces down the image **/
+}
+
+
+
+
+
+
+.text_top_sdg_r {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-transform: uppercase;
+	/**background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);**/
+	background: white;
+	background-size: 200%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: animate-gradient 2.5s linear infinite;
+	-webkit-text-stroke: 0.3px black;
+}
+
+@keyframes animate-gradient {
+	to {
+		background-position: 200px;
+	}
+}
+
+/**	
+	position: absolute;
+	z-index: 2;
+	font-size: 32px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+**/
+
+
+
+
+
+.title_top_sdg_r h1 {
+	font-family: "Anton", sans-serif;
+	font-size: 4rem; /** root em, que é relativo ao tamanho da fonte do elemento raiz da pagina que é html, 1rem é igual a 12px na maioria dos navegadores. 
+	ao usar o rem mesmo que o usuario mude a fonte do navegador ou de zoom sla tudo aumenta proporcionalmente, aí isso facilita pra manter as proporcoes entre titulos subititulos e paragrafos
+
+	px é fixo
+	rem é escala com o navegador**/
+	color: white;
+	/**text-shadow: 2px 2px 5px black, 2px 2px 4px gray;**/ /** significado por ordem: deslocamento x, deslocamento y, desfoque, cor **/
+}
+
+
+
+
+
+.subtitle_top_sdg_r h2 {
+	font-size: 2rem;
+	font-family: "Anton", sans-serif;
+	/**text-shadow: 2px 2px 5px white, 2px 2px 4px gray;**/
+}
+
+
+
+
+
+.text_right_sdg_r {
+	
+}
+
+
+
+
+
+.text_to_justify {
+	text-align: justify;
+}
+
+
+
+
+
+.second_row_buttons_sdg_r {
+	
+}
+
+.btns_to_hover {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+
+.btn_hoover_me_sdg_r {
+	padding: 9px 25px;
+	/**padding: 15px 40px;**/
+	border: none;
+	outline: none;
+	color: #FFF;
+	cursor: pointer;
+	position: relative;
+	z-index: inherit;
+	border-radius: 50px; 
+	background-color: transparent;
+}
+
+.btn_hoover_me_sdg_r::after{
+	content: "";
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #2A140E; /** #432b55 #333 **/
+	left: 0;
+	top: 0;
+	border-radius: 60px;
+}
+
+
+.btn_hoover_me_sdg_r::before {
+	content: "";
+	background: linear-gradient(
+		45deg,
+		#FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00C8, #FF0000
+	); 
+	position: absolute;
+	top: -2px; 
+	left: -2px;
+	background-size: 600%;
+	z-index: -1;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	filter: blur(8px);
+	
+	/** animation **/
+	animation: glowing 20s linear infinite;
+	transition: opacity .3s ease-in-out;
+	border-radius: 10px;
+	opacity: 0;
+}
+
+@keyframes glowing {
+	0% {background-position: 0 0;}
+	50% {background-position: 400% 0;}
+	100% {background-position: 0 0;}
+}
+
+.btn_hoover_me_sdg_r:hover::before {
+	opacity: 1;
+}
+
+.btn_hoover_me_sdg_r:active:after {
+	background: transparent;
+}
+
+.btn_hoover_me_sdg_r:active {
+	color: #000;
+	font-weight: bold;
+}
+
+
+
+
+
+
+.btn4_hoover_me_sdg_r {
+	width: 100%;
+	text-align: center;
+	padding: 9px 25px;
+	/**padding: 15px 40px;**/
+	border: none;
+	outline: none;
+	color: #FFF;
+	cursor: pointer;
+	position: relative;
+	z-index: inherit;
+	border-radius: 50px; 
+	background-color: transparent; /** aq para mudar a cor do botao **/
+}
+
+.btn4_hoover_me_sdg_r::after{
+	content: "";
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #2A140E; /** #333 **/
+	left: 0;
+	top: 0;
+	border-radius: 60px;
+}
+
+
+.btn4_hoover_me_sdg_r::before {
+	content: "";
+	background: linear-gradient(
+		45deg,
+		#FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00C8, #FF0000
+	);
+	position: absolute;
+	top: -2px; 
+	left: -2px;
+	background-size: 600%;
+	z-index: -1;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	filter: blur(8px);
+	
+	/** animation **/
+	animation: glowing 20s linear infinite;
+	transition: opacity .3s ease-in-out;
+	border-radius: 10px;
+	opacity: 0;
+}
+
+@keyframes glowing {
+	0% {background-position: 0 0;}
+	50% {background-position: 400% 0;}
+	100% {background-position: 0 0;}
+}
+
+.btn4_hoover_me_sdg_r:hover::before {
+	opacity: 1;
+}
+
+.btn4_hoover_me_sdg_r:active:after {
+	background: transparent;
+}
+
+.btn4_hoover_me_sdg_r:active {
+	color: #000;
+	font-weight: bold;
+}
+
+
+.a_sdg_r{
+	font-family: "Open Sans", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: white;
+	text-decoration: none;
+}
+
+.a_sdg_r:hover {
+	color: white;
+}
+
+
+.button_four_sdg_r{
+	color: white;
+	align-content: center;
+	width: 100%;
+	height: 40px;
+	background-color: pink;
+	border: none;
+	border-radius: 50px;
+	cursor:pointer;
+	transition: all 0.3s ease 0s;
+}
+
+
+
+
+
+.button_four_sdg_r:hover{
+	color: white;
+	background-color: #FF2967;
+	padding: 9px 25px;
+}
+
+
+
+
+
+.d-flex flex-wrap gap-2 mt-3 {
+	
+}
+
+
+
+
+
+.second-line_sdg_r mt-2 {
+	
+}
+
+
+
+
+
+.second-line_sdg_r mt-2 {
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+
+.zoom-wrapper_sdg_r {
+	height: 200px;
+	overflow: hidden;
+	border-radius: 16px;
+}
+
+
+
+
+
+.zoom-wrapper_sdg_r img {
+	object-fit: cover;
+	transition: transform 0.8s;
+	height: 100%;
+}
+
+
+
+
+
+.zoom-wrapper_sdg_r img:hover {
+	transform: scale(1.5);
+} 
+**/
+
+
+
+
+/* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	/**background-color: pink;**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav_button_sdg_r{
+	font-family: "Open Sans", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: #edf0f1;
+	text-decoration: none;
+}
+
+
+
+
+
+.logo_sdg_r {
+	cursor: pointer; /** n ta pegando essa teg, olha dnv	**/
+}
+
+
+
+
+
+
+
+.line_for_division {
+	color: black;
+	border: none;
+	border-top: 2px solid #0000;
+	margin: 20px 0;
+}
+
+
+
+
+#img_add_border_sdg_r {
+	border: 10px double #432b55;
+	width: 100%;
+	height: 100%;
+}
+
+
+.add_margin_sdg_r {
+	margin-bottom: 100px;
+}
+
+
+
+
+
+/**
+
+.nav_links_sdg_r {
+	list-style: none;
+}
+
+.nav_links_sdg_r li {
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+.nav_links_sdg_r li a {
+	transition: all 0.3s ease 0s;
+}
+
+.nav_links_sdg_r li a:hover {
+	color: #FF2967;
+}
+
+.nav_button_sdg_r {
+	color: black;
+	padding: 9px 25px;
+	background-color: pink;
+	border: none;
+	border-radius: 50px;
+	cursor:pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.nav_button_sdg_r:hover {
+	color: white;
+	background-color: #FF2967;
+}
+**/
+
+
+.inside_top_image_target_r {
+	margin: 35px;
+	color: white;
+}
+
+.image_left_target_r {
+	height: 500px;
+	width: 200;
+}
+
+.top_target_r {
+	background-image: url("../img/rubia/library.jpg");
+	background-size: 500px;
+	text-align: center;
+}
+
+.target {
+	background-color: pink;
+}
