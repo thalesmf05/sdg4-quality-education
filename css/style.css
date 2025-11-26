@@ -49,9 +49,57 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
+/*  Navbar dropdown  */
+/*This overrides the default bootstrap dropdown-menu size and pposition*/
+.campaigns-dropdown{
+	background-color: #000;
+	min-width: 420px; /*change the default bootstrap's width*/
+	color: #fff;
+
+	/*removes default border and corners*/
+	border: none;
+	border-radius: 0;
+	padding: 0;
+}
+.campaigns-dropdown img{
+	display: block;
+	width: 100%; /*makes it fills the width of the column*/
+	height: auto; /*resposiviness*/
+}
+.campaigns-dropdown a:hover{
+	opacity: 0.85;
+}
+
+/*shows the dropdown on hover
+sources: https://youtu.be/n-2Kwm2CJ9c?si=Jsybr55dkSkyXspm*/
+.dropdown:hover .dropdown-menu{
+	display: block; 
+}
+
+
+/*Hover underline effect for nav links
+source: https://youtu.be/NaE2DMCkMkk?si=irN1dnEl6ar3fV93*/
+.links-nav .nav-link{
+	position: relative;
+}
+.links-nav .nav-link::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 0;
+	height: 3px;
+	background-color: #432b55;
+	transition: width 0.3s ease;
+}
+.links-nav .nav-link:hover::before{
+	width: 100%;
+}
+
 @media(max-width:750px){
 	.links-nav{
 		display: none;
+
 	}
 }
 /*End navbar*/
