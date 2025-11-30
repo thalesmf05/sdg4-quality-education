@@ -96,12 +96,7 @@ source: https://youtu.be/NaE2DMCkMkk?si=irN1dnEl6ar3fV93*/
 	width: 100%;
 }
 
-@media(max-width:750px){
-	.links-nav{
-		display: none;
 
-	}
-}
 /*End navbar*/
 
 /*	CSS for campaing page
@@ -143,14 +138,50 @@ Sources: https://youtu.be/Si4ViAvvnwU?si=R38BF-6bvPxQ2DKY and https://www.w3scho
 .text-inside-img{
 	position: absolute;
 	bottom: 5%;
-	color: black;
+	color: rgb(255, 255, 255);
 	padding-left: 40px;
 }
-.text-inside-img p {
-	font-size: 25px;
+
+.col-sm-6 .text-inside-img p {
+	font-size: 1.7rem;
+	font-weight: 100 !important;
 }
-.text-inside-img h3 {
-	font-size: 35px;
+.col-sm-6 .text-inside-img h3 {
+	font-size: 3rem;
+}
+.col-lg-4 .text-inside-img p {
+	font-size: 1.2rem;
+}
+.col-lg-4 .text-inside-img h3 {
+	font-size: 2.0rem;
+}
+
+@media(max-width:750px){
+	/*hide the nav links for mobile version*/
+	.links-nav{
+		display: none;
+	}
+	/*change the internal paddig for the mobile version*/
+	.col-lg-4 .text-inside-img{
+		bottom: 2%;
+		padding-left: 15px;
+	}
+	.col-lg-4 .text-inside-img p {
+		display: none;
+	}
+	.col-lg-4 .text-inside-img h3 {
+		font-size: 1.15rem;
+		padding: 0;
+	}
+	.col-sm-6 .text-inside-img p {
+		display: none;
+	}
+	.col-sm-6 .text-inside-img h3 {
+		font-size: 1.5rem;
+		padding: 0;
+	}
+	
+
 }
 
 
