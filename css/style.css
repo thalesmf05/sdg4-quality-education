@@ -156,12 +156,36 @@ Sources: https://youtu.be/Si4ViAvvnwU?si=R38BF-6bvPxQ2DKY and https://www.w3scho
 	font-size: 2.0rem;
 }
 
+/*Form validation control*/
+.wrapper-contact-method{
+	padding: 15px;
+	border: transparent 1px solid;
+	border-radius: 5px;
+}
+
+.input-control-t.success input {
+	border-color: #2ecc71; /*green*/
+}
+.input-control-t.error input {
+	border-color: #e74c3c; /*red*/
+}
+.input-control-t .form-error-t{
+	color: #e74c3c;
+	font-size: 12px;
+	height: 12px;
+}
+
+
+/*Responsive design for navbar, campaign, and education challenges page
+Author: Thales Ferrari*/
+
 @media(max-width:750px){
 	/*hide the nav links for mobile version*/
 	.links-nav{
 		display: none;
 	}
-	/*change the internal paddig for the mobile version*/
+
+	/*change the internal paddig and hide <p> for the mobile version*/
 	.col-lg-4 .text-inside-img{
 		bottom: 2%;
 		padding-left: 15px;
@@ -216,6 +240,8 @@ Sources: https://youtu.be/Si4ViAvvnwU?si=R38BF-6bvPxQ2DKY and https://www.w3scho
 	width: 100%;
 	height: 400px;
 }	
+
+
 
 
 /*Stories page
