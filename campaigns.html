@@ -23,10 +23,12 @@
 	<div id="nav-placeholder"></div>
 
     <div class="container spacer-top-body">
-		<div class="row anton-regular"> <!--Heading, one colum-->
+		<div class="row"> <!--Heading, one colum-->
 			<div class="col-sm-12 mb-4"> 
-				<h1>Campaign around the world</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum mollis fringilla. Donec a malesuada purus. Sed non dui placerat, feugiat ligula sed, aliquam tellus. Nullam blandit, mauris vel gravida scelerisque, magna nulla convallis dolor, a aliquam nulla dui et nulla.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum mollis fringilla.</p>
+				<h1 class="anton-regular">Global Campaigns Supporting SDG 4</h1>
+				<p class="open-sans-regular">
+					Education changes lives, and not everyone has the same chance to learn. Around the world, different groups work hard to make school more accessible, help people read and write, and support communities that face real barriers. Here are some important campaigns making a difference in education for all:
+				</p>
 			</div>
 		</div>
 
@@ -50,7 +52,7 @@
 						<!--  Photo by Ron Lach : https://www.pexels.com/photo/girls-in-girl-scouts-uniform-holding-books-10637666/  -->
 						<div class="text-inside-img"> <!--text that goes insed the image-->
 							<p>Campaign</p>
-							<h3>Malala Found</h3>
+							<h3>Malala Fund</h3>
 						</div>
 					</a>
 				</div>
@@ -140,7 +142,7 @@
 						<p class="mb-0">First Name</p>
 						<div class="form-floating input-control-t mt-1">
 							<input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
-							<label for="userFirstName">First Name</label>
+							<label for="inputFirstName">First Name</label>
 							<div class="form-error-t"></div>
 						</div>
 					</div>
@@ -148,7 +150,7 @@
 						<p class="mb-0">Surname</p>
 						<div class="form-floating input-control-t mt-1">
 							<input type="text" class="form-control" id="inputSurname" placeholder="Surname">
-							<label for="userSurname">Surname</label>
+							<label for="inputSurname">Surname</label>
 							<div class="form-error-t"></div>
 						</div>
 					</div>
@@ -157,8 +159,8 @@
 					<div class="col-7">
 						<p class="mb-0">Email</p> <!--  Email  -->
 						<div class="form-floating mt-1 input-control-t ">
-							<input type="text" class="form-control" id="inputEmail" placeholder="name@gmail.com">
-							<label for="userEmail">name@gmail.com</label>
+							<input type="email" class="form-control" id="inputEmail" placeholder="name@gmail.com">
+							<label for="inputEmail">name@gmail.com</label>
 							<div class="form-error-t"></div>
 						</div>
 					</div>
@@ -166,7 +168,7 @@
 						<p class="mb-0">Phone Number</p> <!--  Phone number  -->
 						<div class="form-floating mt-1 mb-2 input-control-t ">
 							<input type="tel" inputmode="numeric" class="form-control" id="inputPhone" placeholder="0891231234" pattern="[0-9]{7,15}">
-							<label for="userPhone">0891231234</label>
+							<label for="inputPhone">0891231234</label>
 							<div class="form-error-t"></div>
 						</div>
 					</div>
@@ -174,10 +176,10 @@
 
 				<div class="row mb-3"> <!--  Text area for comments  -->
 					<div class="col-12">
-						<p class="mb-0">Describe your campaign ideia</p>
+						<p class="mb-0">Describe your campaign idea</p>
 						<div class="form-floating mt-1 input-control-t ">
 							<textarea class="form-control" id="inputTextArea" rows="3"></textarea>
-							<label for="floatingTextarea2">Comments</label>
+							<label for="inputTextArea">Comments</label>
 							<div class="form-error-t"></div>
 						</div>
 					</div>
@@ -188,13 +190,13 @@
 						<p>If we decide to use your idea do you want to be contacted?</p>
 						<div class="input-control-t wrapper-contact-method" id="contactError"> <!--  Wrapping the radio buttons -->
 							<div class="form-check">
-								<input class="form-check-input" type="radio" name="contact" id="contactYes">
+								<input class="form-check-input" type="radio" name="contact" value="yes" id="contactYes">
 								<label class="form-check-label" for="contactYes">
 									Yes, contact me
 								</label>
 							</div>
 							<div class="form-check">
-								<input class="form-check-input" type="radio" name="contact" id="contactNo">
+								<input class="form-check-input" type="radio" name="contact" value="no" id="contactNo">
 								<label class="form-check-label" for="contactNo">
 									No, don't contact me
 								</label>
@@ -203,17 +205,17 @@
 						</div>	
 					</div>
 
-					<div class="col-lg-6 col-12 mb-"> <!--  Checkbox  -->
+					<div class="col-lg-6 col-12 mb-3"> <!--  Checkbox  -->
 						<p>Where should we contact you?</p>
 						<div class="input-control-t wrapper-contact-method" id="optionError">
 							<div class="form-check">
-								<input class="form-check-input" type="checkbox" value="" id="checkboxEmail">
+								<input class="form-check-input" type="checkbox" value="email" name="contactMethod" id="checkboxEmail">
 								<label class="form-check-label" for="checkboxEmail">
 									Email
 								</label>
 							</div>
 							<div class="form-check">
-								<input class="form-check-input" type="checkbox" value="" id="checkboxPhone">
+								<input class="form-check-input" type="checkbox" value="phone" name="contactMethod" id="checkboxPhone">
 								<label class="form-check-label" for="checkboxPhone">
 									Phone
 								</label>

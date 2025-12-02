@@ -34,18 +34,49 @@ const resetErrors = () => {
         errorDisplay.innerText = ''; //clear error message
     });
 }
+const setNeutral = element => {
+    let inputControl;
+    //for contact groups (radios and checkboxex), the element is the inputControl itself
+    //for normal inputs, the wrapper is the parent div 
+    if (element.id === 'contactError' || element.id === 'optionError') {
+        inputControl = element; 
+    } else {
+        inputControl = element.parentElement; 
+    }   
+
+    inputControl.classList.remove('error'); //remove error classes from the parent div
+    inputControl.classList.remove('success'); 
+    const errorDisplay = inputControl.querySelector('.form-error-t'); //select the error message div
+
+    errorDisplay.innerText = "";
+}
+
 const setError = (element, message) => { //set error message
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.form-error-t'); //select error message empty div
+    let inputControl;
+    //follow the same logic as setNeutral function, the only difference is that this function sets the error message and error class
+    if (element.id === 'contactError' || element.id === 'optionError') {
+        inputControl = element; 
+    } else {
+        inputControl = element.parentElement; 
+    }
+
+    const errorDisplay = inputControl.querySelector('.form-error-t'); 
 
     errorDisplay.innerText = message;
-    inputControl.classList.add('error'); //add error class to the parent div
-    inputControl.classList.remove('success'); //remove success class from parent div
+    inputControl.classList.add('error'); 
+    inputControl.classList.remove('success'); 
 }
 
 const setSucces = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector(".form-error-t");
+    let inputControl;
+    //follow the same logic as setNeutral function, the only difference is that this function sets the success class
+    if (element.id === 'contactError' || element.id === 'optionError') {
+        inputControl = element; 
+    } else {
+        inputControl = element.parentElement; 
+    }
+
+    const errorDisplay = inputControl.querySelector('.form-error-t'); 
 
     errorDisplay.innerText = "";
     inputControl.classList.add("success");
@@ -97,24 +128,24 @@ const validateInputs = () => {
         setSucces(inputSurname); //set success if surname is valid
     }
 
-    if (!contactYes.checked && !contactNo.checked){ //verify if user selected yes or no for contact preference, if neither is selected, show error
+    if (!contactYes.checked && !contactNo.checked){ //valide if users selected any contact option, if not show error 
         setError(contactError, "Please select an option");
-    }else if(contactYes.checked){ //only requires email and phone if user wants to be contacted
-        setSucces(contactError);
-        if(checkboxEmail.checked || checkboxPhone.checked){ //at least one contact method must be selected
-            setSucces(optionError);
-            setSucces(contactError);
+    }else if(contactYes.checked){ //only requires email and phone if user chose (yes) to be contacted
+        setNeutral(contactError);
+        if(checkboxEmail.checked || checkboxPhone.checked){ //at least one contact method must be selected when users wants to be contacted
+            setNeutral(optionError);
+            setNeutral(contactError);
             //if email contact method is selected, validate email
             if(checkboxEmail.checked){ //validate email if email contact method is selected
                 validateEmail(emailValue);
             }else{ //if email contact method is not selected, set success
-                setSucces(inputEmail);
+                setNeutral(inputEmail);
             }
             //if phone contact method is selected, validate phone
             if(checkboxPhone.checked){//validate phone if phone contact method is selected
                 validatePhone(phoneValue);
             }else{ //if phone contact method is not selected, set success
-                setSucces(inputPhone);
+                setNeutral(inputPhone);
             }
         }else{ //tell user to select at least one contact method if contactYes is checked but no method is selected
             setError(optionError, "Please select at least one contact method");
@@ -122,10 +153,10 @@ const validateInputs = () => {
             setError(inputPhone, "");
         }
     }else{ //if user does not want to be contacted, no need to validate email and phone
-        setSucces(optionError);
-        setSucces(contactError);
-        setSucces(inputEmail);
-        setSucces(inputPhone);
+        setNeutral(optionError);
+        setNeutral(contactError);
+        setNeutral(inputEmail);
+        setNeutral(inputPhone);
     }
 
     if(commentsValue === ""){ //validate comments
