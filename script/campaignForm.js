@@ -14,6 +14,12 @@ const checkboxPhone = document.getElementById('checkboxPhone');
 const contactError = document.getElementById('contactError');
 const optionError = document.getElementById('optionError');
 
+let isFormValid = true;
+
+// Disable native validation so our custom checks always run, even when the browser
+// thinks the pattern/type is invalid (e.g. phone numbers with spaces or dashes).
+form.setAttribute('novalidate', true); // Disable native validation, source: https://stackoverflow.com/questions/3090369/disable-validation-of-html-form-elements
+
 form.addEventListener('submit', event => {
     event.preventDefault();
     
@@ -65,6 +71,7 @@ const setError = (element, message) => { //set error message
     errorDisplay.innerText = message;
     inputControl.classList.add('error'); 
     inputControl.classList.remove('success'); 
+    isFormValid = false; //set form validity status to false
 }
 
 const setSucces = element => {
@@ -99,9 +106,11 @@ const validateEmail = email => { //email validation
 }
 
 const validatePhone = phone => { //phone validation
-    if(phone === ""){ //check if phone is empty
+    const digitsOnly = phone.replace(/\D/g, ''); //strip everything except digits for validation
+
+    if(digitsOnly === ""){ //check if phone is empty
         return setError(inputPhone, "Phone number is required");   
-    }else if (phone.length < 7 || phone.length > 15){ //check if phone number length is valid
+    }else if (digitsOnly.length < 7 || digitsOnly.length > 15){ //check if phone number length is valid
         return setError(inputPhone, "Phone number must be between 7 and 15 digits");
     }else{
         return setSucces(inputPhone);
@@ -115,6 +124,8 @@ const validateInputs = () => {
     const emailValue = inputEmail.value.trim();
     const phoneValue = inputPhone.value.trim();
     const commentsValue = inputComments.value.trim();
+
+    isFormValid = true; //reset form validity status
 
     if(firstNameValue === "" || firstNameValue.length < 2){ //check if name is empty or less than 2 characters
         setError(inputFirstName, "User name is required");
@@ -165,5 +176,10 @@ const validateInputs = () => {
         setSucces(inputComments);
     }
 
-};
+    if(isFormValid){ //if form is valid, submit the form (you can replace this with actual form submission logic)
+        alert("Form submitted successfully!");
+        form.submit();
 
+        location.replace("index.html");
+    }
+};
