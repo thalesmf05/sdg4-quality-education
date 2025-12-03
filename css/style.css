@@ -26,22 +26,41 @@
   margin: 0;
   padding: 0;
   justify-content: center;
+  align-items: center;
 }
 .links-nav a, .links-nav ul a{
 	font-size: 20px;
 }
 .links-nav li {
-	padding: 13px;
+	padding: 8px 12px;
 }
 .spacer-top-body{
 	margin-top: 4rem;
+}
+.navbar-logo{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+}
+.logo-title{
+color: black;
+font-size: 1.3rem;
+}
+
+.navbar-logo img{
+  height: 48px;
+  width: auto;
 }
 
 /*scrolling effect navbar*/
 .navbar {
   background-color: transparent;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
 }
+
 
 /*When user scrolls more than 56px change the color*/
 .navbar-scrolled {
@@ -163,10 +182,12 @@ Sources: https://youtu.be/Si4ViAvvnwU?si=R38BF-6bvPxQ2DKY and https://www.w3scho
 	border-radius: 5px;
 }
 
-.input-control-t.success input {
+.input-control-t.success input,
+.input-control-t.success textarea {
 	border-color: #2ecc71; /*green*/
 }
-.input-control-t.error input {
+.input-control-t.error input,
+.input-control-t.error textarea {
 	border-color: #e74c3c; /*red*/
 }
 .input-control-t .form-error-t{

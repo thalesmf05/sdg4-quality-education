@@ -14,23 +14,32 @@ const checkboxPhone = document.getElementById('checkboxPhone');
 const contactError = document.getElementById('contactError');
 const optionError = document.getElementById('optionError');
 
-let isFormValid = true;
+
 
 // Disable native validation so our custom checks always run, even when the browser
 // thinks the pattern/type is invalid (e.g. phone numbers with spaces or dashes).
 form.setAttribute('novalidate', true); // Disable native validation, source: https://stackoverflow.com/questions/3090369/disable-validation-of-html-form-elements
 
 form.addEventListener('submit', event => {
+    
     event.preventDefault();
     
-    validateInputs();
+    const isFormValid = validateInputs(); //this functions returns true or false based on form verification
+    
+    if(isFormValid){ //if form is valid, submit
+        form.submit();
+        alert("Thans you for submmiting your campaign idea for helping to improve quality education around the world.")
+        location.replace("index.html"); //goes back to the home page after form submission
+
+    }
+
 });
 
-form.addEventListener('reset', event => {
+form.addEventListener('reset', event => { //reset error/success messages on form reset
     resetErrors();
 });
 
-const resetErrors = () => {
+const resetErrors = () => { //function to reset all error and success messages
     const inputControls = document.querySelectorAll('.input-control-t'); //select all input control divs
 
     inputControls.forEach(inputControl => {
@@ -40,7 +49,7 @@ const resetErrors = () => {
         errorDisplay.innerText = ''; //clear error message
     });
 }
-const setNeutral = element => {
+const setNeutral = element => { //remove error/success messages when the element is not required to be filed
     let inputControl;
     //for contact groups (radios and checkboxex), the element is the inputControl itself
     //for normal inputs, the wrapper is the parent div 
@@ -71,7 +80,7 @@ const setError = (element, message) => { //set error message
     errorDisplay.innerText = message;
     inputControl.classList.add('error'); 
     inputControl.classList.remove('success'); 
-    isFormValid = false; //set form validity status to false
+
 }
 
 const setSucces = element => {
@@ -97,11 +106,14 @@ const isValidEmail = email => { //check if the email has the correct format
 
 const validateEmail = email => { //email validation
     if(email === ""){ //check if email is empty
-        return setError(inputEmail, "Email is required");
+        setError(inputEmail, "Email is required");
+        return false
     }else if(!isValidEmail(email)){ //calls isValidEmail function to check email format
-        return setError(inputEmail, "Provide a valid email address");
+        setError(inputEmail, "Provide a valid email address");
+        return false;
     }else{
-        return setSucces(inputEmail);
+        setSucces(inputEmail);
+        return true;
     }
 }
 
@@ -109,11 +121,14 @@ const validatePhone = phone => { //phone validation
     const digitsOnly = phone.replace(/\D/g, ''); //strip everything except digits for validation
 
     if(digitsOnly === ""){ //check if phone is empty
-        return setError(inputPhone, "Phone number is required");   
+        setError(inputPhone, "Phone number is required");  
+        return false; 
     }else if (digitsOnly.length < 7 || digitsOnly.length > 15){ //check if phone number length is valid
-        return setError(inputPhone, "Phone number must be between 7 and 15 digits");
+        setError(inputPhone, "Phone number must be between 7 and 15 digits");
+        return false;
     }else{
-        return setSucces(inputPhone);
+        setSucces(inputPhone);
+        return true;
     }
 }
 
@@ -125,22 +140,25 @@ const validateInputs = () => {
     const phoneValue = inputPhone.value.trim();
     const commentsValue = inputComments.value.trim();
 
-    isFormValid = true; //reset form validity status
+    let isValid = true; //reset form validity status
 
     if(firstNameValue === "" || firstNameValue.length < 2){ //check if name is empty or less than 2 characters
         setError(inputFirstName, "User name is required");
+        isValid = false;
     }else{
         setSucces(inputFirstName); //set success if name is valid
     }
     
     if(surnameValue === "" || surnameValue.length < 2){ //check if surname is empty or less than 2 characters
         setError(inputSurname, "Surname is required");
+        isValid = false;
     }else{
         setSucces(inputSurname); //set success if surname is valid
     }
 
     if (!contactYes.checked && !contactNo.checked){ //valide if users selected any contact option, if not show error 
         setError(contactError, "Please select an option");
+        isValid = false;
     }else if(contactYes.checked){ //only requires email and phone if user chose (yes) to be contacted
         setNeutral(contactError);
         if(checkboxEmail.checked || checkboxPhone.checked){ //at least one contact method must be selected when users wants to be contacted
@@ -148,13 +166,17 @@ const validateInputs = () => {
             setNeutral(contactError);
             //if email contact method is selected, validate email
             if(checkboxEmail.checked){ //validate email if email contact method is selected
-                validateEmail(emailValue);
+                if(validateEmail(emailValue) === false){
+                    isValid = false;
+                }
             }else{ //if email contact method is not selected, set success
                 setNeutral(inputEmail);
             }
             //if phone contact method is selected, validate phone
             if(checkboxPhone.checked){//validate phone if phone contact method is selected
-                validatePhone(phoneValue);
+                if(validatePhone(phoneValue) === false){
+                    isValid = false;
+                }
             }else{ //if phone contact method is not selected, set success
                 setNeutral(inputPhone);
             }
@@ -162,6 +184,7 @@ const validateInputs = () => {
             setError(optionError, "Please select at least one contact method");
             setError(inputEmail, ""); 
             setError(inputPhone, "");
+            isValid = false;
         }
     }else{ //if user does not want to be contacted, no need to validate email and phone
         setNeutral(optionError);
@@ -172,14 +195,10 @@ const validateInputs = () => {
 
     if(commentsValue === ""){ //validate comments
         setError(inputComments, "Comments are required");
+        isValid = false;
     }else{
         setSucces(inputComments);
     }
 
-    if(isFormValid){ //if form is valid, submit the form (you can replace this with actual form submission logic)
-        alert("Form submitted successfully!");
-        form.submit();
-
-        location.replace("index.html");
-    }
+    return isValid;
 };
