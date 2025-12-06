@@ -5,232 +5,516 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Matheus Borges Mota Reis">
 
-		<title>Resources</title>
+		<title>SDG 4 - Quality Education | Resources & Learning</title>
+
+		<!-- SEO -->
+		<meta name="keywords" content="SDG 4, Quality Education, education resources, Global Goals, sustainable development, teaching materials">
+		<meta name="title" content="SDG 4 - Quality Education Resources">
+		<meta name="description" content="Discover curated resources, reports, and tools to learn, teach and take action for SDG 4 - Quality Education. Explore videos, official reports and trusted learning platforms.">
+		<meta name="robots" content="index, follow">
+		<meta name="language" content="English">
 
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-		<!-- Bootstrap -->
+		<!-- Bootstrap CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 		<!-- Bootstrap Icons-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-		<!-- Icons -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+		<!-- Font Awesome Icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/style.css">
 	</head>
-	<body>
-		<!-- NAVBAR -->
-		<div id="nav-placeholder">	
-		</div>
+	<body class="body mtBody page-resources">
 
-		<!-- MAIN CONTENT -->
-		<main class="container py-4 spacer-top-body">
+		<!-- NAVBAR (loaded via jQuery in main.js)-->
+		<div id="nav-placeholder"></div>
 
-			<!-- HERO -->
-			<section class="mb-4">
-				<div class="text-center">
+		<!-- ================================== MAIN CONTENT ================================== -->
+		<main class="mt-main-body">
 
-					<!-- TITLE + SUBTITLE -->
-					<h1 class='display-4 mb-3'>Learn & Share: Educational Resources</h1>
-					<p class="text-secondary mb-3">Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae.</p>
+			<!-- ============================== HERO: Resources intro + search ================= 
+					Inspired by: https://globalgoals.org/resources
+			================================================================================== -->
+			<section class="py-5">
 
-					<!-- SEARCH BAR -->
-					<div class="input-group">
-						<input type="search" class="form-control" placeholder="Search">
-						<span class="input-group-text">
-							<i class="bi bi-search"></i>
-						</span>
-					</div>
 
-					<!-- FILTER BUTTONS -->
-					<div class="mb-2">
-						<button type="button" class="btn btn-dark d-inline-block mt-2 px-3 py-2">Filter</button>
-						<button type="button" class="btn btn-dark d-inline-block mt-2 px-3 py-2">Filter</button>
-					</div>
+				<div class="container mt-resources-main">
+					<div class="text-center">
+
+						<!-- MAIN TITLE -->
+						<h1 class='display-4 mb-3 mt-main-heading'>Learn & Share: Educational Resources</h1>
+
+						<!-- SUBTITLE -->
+						<p class="text-secondary mb-3">Explore reports, videos and tools about SDG 4 - Quality Education. You can use these resources to learn, to teach and take action for a inclusive, equitable education for all.</p>
+
+						<!-- QUICK JUMP BUTTONS -->
+						<div class="mb-2 d-flex flex-wrap justify-content-center gap-2">
+							<a class="btn btn-dark mt-btn" href="#featured-resources">Featured resources</a>
+							<a class="btn btn-dark mt-btn" href="#trusted-platforms">Websites & platforms</a>
+							<a class="btn btn-dark mt-btn" href="#share-resource">Share a resource</a>
+						</div>
+					</div>	
 				</div>
 			</section>
 
-			<!-- RESOURCES GRID -->
-			<section class="mb-4">
-			  <div class="row row-cols-1 row-cols-md-3 g-4">
-			    <div class="col">
-					<div class="bg-light p-3 rounded">
-						<div class="ratio ratio-16x9 rounded bg-white"></div> 
-						<!-- changer for: <img class="w-100 h-100 object-fit-cover" src=""-->
-						<p class="text-secondary mt-3 mb-2">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>	
-					</div>
-				</div>
+			<!-- ============================== RESOURCES GRID ============================== 
+					Based on card layout from: https://globalgoals.org/resources
+			===================================================================================-->
+			<section class="py-4" id="featured-resources">
+			  <div class="container mt-resources-main">
 
-			    <div class="col">
-					<div class="bg-light p-3 rounded">
-						<div class="ratio ratio-16x9 rounded bg-white"></div> 
-						<!-- changer for: <img class="w-100 h-100 object-fit-cover" src=""-->
-						<p class="text-secondary mt-3 mb-2">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>	
-					</div>			    
-				</div>
+			  	<!-- Section label -->
+			  	<p class="mt-section-eyebrow text-center">Featured</p>
+			  	<h2 class="h2 fw-bold text-center mb-4">Key SDG 4 resources</h2>
 
-			    <div class="col">
-					<div class="bg-light p-3 rounded">
-						<div class="ratio ratio-16x9 rounded bg-white"></div> 
-						<!-- changer for: <img class="w-100 h-100 object-fit-cover" src=""-->
-						<p class="text-secondary mt-3 mb-2">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>	
+			  	<div class="row row-cols-1 row-cols-md-3 g-4">
+
+			  		<!-- Card 1: Intro video -->
+				    <div class="col">
+				    	<article class="bg-light p-3 mt-resource-card h-100">
+
+				    			<!-- Video -->
+								<!-- -->
+								<div class="ratio ratio-16x9 rounded mt-card-img overflow-hidden">
+									<img 
+										src="https://img.youtube.com/vi/1wy1hwZgHdA/maxresdefault.jpg"
+										alt="SG4 explainer video thumbnail"
+										class="w-100 h-100 object-fit-cover rounded" 
+									>
+								</div> 
+
+								<!-- Title -->
+									<h3 class="h6 mb-1">SDG 4: Quality Education - Intro Video</h3>
+
+								<!-- Description -->
+								<p class="text-secondary mt-2 mb-2">
+									A short explainer video introducing Sustainable Development Goal 4 and why quality education is essential for every child around the world.
+								</p>	
+
+								<!-- Link -->
+								<a
+									href="https://www.youtube.com/watch?v=1wy1hwZgHdA" 
+									target="_blank"
+									class="mt-resource-link"
+								>
+									Watch a video on Youtube
+								</a>
+								<p class="mt-1 small text-muted">
+									Video hosted on Youtube. All rights reserved to the original creator.
+								</p>
+
+								
+						</article>
 					</div>
+
+					<!-- Card 2: Fast facts PDF -->
+				    <div class="col">
+				    	<article class="bg-light p-3 mt-resource-card h-100">
+
+				    			<!-- Image -->
+				    			<!-- https://www.pexels.com/photo/a-group-of-business-partner-looking-at-a-graph-print-out-7693707/ -->
+								<div class="ratio ratio-16x9 rounded mt-card-img overflow-hidden">
+									<img 
+										src="img/matheus/cardTwo.jpg"
+										class="w-100 h-100 object-fit-cover"
+										alt="A group of business partner looking at a graph image"
+									>
+								</div> 
+								
+
+								<!-- Title -->
+									<h3 class="h6 mb-1">Goal 4 - Fast Facts (UN)</h3>
+
+								<!-- Description -->
+								<p class="text-secondary mt-2 mb-2">
+									A quick overview of the main statistic and challenges behind SDG 4, gathered form official UN sources.
+								</p>	
+
+								<!-- Link -->
+								<a 
+									href="https://sdgs.un.org/goals/goal4" 
+									target="_blank"
+									class="mt-resource-link"
+								>
+									View SDG 4 fact sheet	
+								</a>
+						</article>
+					</div>
+
+					<!-- Card 3: UNICEF report -->
+				    <div class="col">
+				    	<article class="bg-light p-3 mt-resource-card h-100">
+
+				    			<!-- Image -->
+				    			<!-- https://www.pexels.com/photo/thai-school-girls-studying-together-10643465/
+								 -->
+								<div class="ratio ratio-16x9 rounded mt-card-img overflow-hidden">
+									<img 
+										src="img/matheus/cardThree.jpg"
+										class="w-100 h-100 object-fit-cover"
+										alt="Girls studying togheter" 
+									>
+								</div> 
+								
+								
+
+								<!-- Title -->
+									<h3 class="h6 mb-1">UNICEF - Every Child Learns</h3>
+
+								<!-- Description -->
+								<p class="text-secondary mt-2 mb-2">
+									An overview of how UNICEF supports learning for children worldwide, with a focus on equity and inclusion.
+								</p>	
+
+								<!-- Link -->
+								<a 
+									href="https://www.unicef.org/education" 
+									target="_blank"
+									class="mt-resource-link"
+								>
+									Read report	
+								</a>
+						</article>
+					</div>
+				  </div>
 				</div>
-			  </div>
 			</section>
 
-			<!-- TITLE + LIST -->
-			<section class="mb-4">
+			<!-- ======================= TRUSTED WEBSITES & PLATFORMS ======================= -->
+			<section class="py-4" id="trusted-platforms">
+				<div class="container mt-resources-main">
 
-				<!-- TOP STRIP -->
-				<div class="border-top border-2 mb-3"></div>
+					<!-- TOP STRIP -->
+					<div class="border-top border-2 mb-3"></div>
 
-				<!-- TITLE -->
-				<h2 class="h2 fw-bold mb-4">Title</h2>
+					<!-- TITLE -->
+					<p class="mt-section-eyebrow mb-1">Explore further</p>
+					<h2 class="h2 fw-bold mb-4">Trusted Websites & Learning Platforms</h2>
 
-				<!-- ITEMS: -->
-				<div class="row g-4">
+					<!-- ITEMS: -->
+					<div class="row g-4">
 
-					<!-- LEFT COLUMN -->
-					<div class="col-md-6">
+						<div class="col-md-12">
 
-						<!-- item 1 -->
-						<div class="d-flex mb-3">
-							<div class="flex-shrink-0 p-3 w-25 bg-light">
-								<div class="ratio ratio-16x9 rounded bg-white"></div>
+							<!-- Item 1 -->
+							<div class="mt-trusted-card d-flex flex-column flex-md-row gap-3 md-4">
+
+								<!-- Image -->
+								<div class="flex-shrink-0 p-3 w-50">
+									<div class="ratio ratio-16x9 rounded mt-card-img overflow-hidden mt-card-img">
+										<img 
+										src="img/matheus/un-sdg4-thumb.jpg"
+										class="w-100 h-100 object-fit-cover"
+										alt="United Nations flags outside UN headquarters"
+									>
+									</div>
+								</div>
+
+								<!-- Title -->
+								<div class="mt-trusted-body">
+									<h3 class="h5 mb-1">UN - Sustainable Development Goal 4 Overview</h3>
+
+									<!-- Description -->
+									<p class="text-secondary mb-1">
+										The official United Nations SDG 4 page gives a full overview of the goal, including the detailed targets and indicators used to measure progress on quality education. 
+										It presents global data, key challenges and updates on how countries are working to ensure inclusive and equitable learning for everyone. 
+										This is the best place to get an accurate, up-to-date picture of how the world is doing on SDG 4 straight from the UN.
+									</p>
+
+									<!-- Link -->
+									<a 
+										href="https://sdgs.un.org/goals/goal4" 
+										target="_blank"
+										class="mt-resource-link"
+									>
+										Visit UN SDG 4 page
+									</a>
+								</div>
 							</div>
-							<div class="flex-grow-1">
-								<h3 class="h5 mb-1">Resource title one</h3>
-								<p class="text-secondary mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.</p>
+
+							<!-- Item 2 -->
+							<div class="mt-trusted-card d-flex flex-column flex-md-row gap-3 md-4">
+
+								<!-- Image -->
+								<div class="flex-shrink-0 p-3 w-50">
+									<div class="ratio ratio-16x9 rounded bg-white overflow-hidden mt-card-img">
+										<img 
+										src="img/matheus/children-sdg4-goals.jpg"
+										class="w-100 h-100 object-fit-cover"
+										alt="United Nations flags outside UN headquarters"
+									>
+									</div>
+								</div>
+
+								<!-- Title -->
+								<div class="mt-trusted-body">
+									<h3 class="h5 mb-1">Global goals - Quality Education</h3>
+
+									<!-- Description -->
+									<p class="text-secondary mb-1">
+										The Global Goals website explains SDG 4 in a more interactive and youth-friendly way, using stories, visuals and simple language. 
+										It connects the goal to everyday life and suggests concrete actions that students, teachers and communities can take to support quality education locally. 
+										This platform is ideal if you want to be inspired, join campaigns or find ideas for classroom and youth projects linked to SDG 4.									
+									</p>
+
+									<!-- Link -->
+									<a 
+										href="https://globalgoals.org/goals/4-quality-education/#things-to-do" 
+										target="_blank"
+										class="mt-resource-link"
+									>
+										Explore Global Goals site
+									</a>
+								</div>
+							</div>
+							
+							<!-- Item 3 -->
+							<div class="mt-trusted-card d-flex flex-column flex-md-row gap-3 md-4">
+
+								<!-- Image -->
+								<div class="flex-shrink-0 p-3 w-50">
+									<div class="ratio ratio-16x9 rounded bg-white overflow-hidden mt-card-img">
+										<img 
+										src="img/matheus/hands-and-graphic.jpg"
+										class="w-100 h-100 object-fit-cover"
+										alt="Persons Hand and graphics under their hands"
+									>
+									</div>
+								</div>
+
+								<!-- Title -->
+								<div class="mt-trusted-body">
+									<h3 class="h5 mb-1">UNESCO - Education</h3>
+
+									<!-- Description -->
+									<p class="text-secondary mb-1">
+										UNESCO’s education portal brings together global research, policy reports and data on how education systems are performing across different regions. 
+										It looks at issues like teacher training, curriculum quality, lifelong learning and equality of opportunity for learners of all ages. 
+										This site is especially useful if you want a deeper, more academic view of the challenges and solutions for achieving SDG 4 worldwide.
+									</p>
+
+									<!-- Link -->
+									<a 
+										href="https://www.unesco.org/en/education" 
+										target="_blank"
+										class="mt-resource-link"
+									>
+										Browse UNESCO education
+									</a>
+								</div>
+							</div>
+
+							<!-- Item 4 -->
+							<div class="mt-trusted-card d-flex flex-column flex-md-row gap-3 md-4">
+
+								<!-- Image -->
+								<div class="flex-shrink-0 p-3 w-50">
+									<div class="ratio ratio-16x9 rounded bg-white overflow-hidden mt-card-img">
+										<img 
+										src="img/matheus/classroom-sdg4.jpg"
+										class="w-100 h-100 object-fit-cover"
+										alt="Students in a classroom"
+									>
+									</div>
+								</div>
+
+								<!-- Title -->
+								<div class="mt-trusted-body">
+									<h3 class="h5 mb-1">UNICEF -Education hub</h3>
+
+									<!-- Description -->
+									<p class="text-secondary mb-1">
+										The UNICEF education hub shows how education can transform children’s lives, with real stories, photos and case studies from different countries. 
+										It highlights the barriers that children face – such as conflict, gender inequality or poverty – and the projects that are helping them get into school and stay learning. 
+										You can also find advocacy materials and resources that support campaigns for every child’s right to a quality education.
+									</p>
+
+									<!-- Link -->
+									<a 
+										href="https://www.unicef.org/education" 
+										target="_blank"
+										class="mt-resource-link"
+									>
+										Visit UNICEF education hub
+									</a>
+								</div>
 							</div>
 						</div>
-
-						<!-- item 2 -->
-						<div class="d-flex">
-							<div class="flex-shrink-0 p-3 w-25 bg-light">
-								<div class="ratio ratio-16x9 rounded bg-white"></div>
-							</div>
-							<div class="flex-grow-1">
-								<h3 class="h5 mb-1">Resource title two</h3>
-								<p class="text-secondary mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.</p>
-							</div>
-						</div>
-
 					</div>
 
-					<!-- RIGHT COLUMN -->
-					<div class="col-md-6">
-						
-						<!-- item 3 -->
-						<div class="d-flex mb-3">
-							<div class="flex-shrink-0 p-3 w-25 bg-light">
-								<div class="ratio ratio-16x9 rounded bg-white"></div>
-							</div>
-							<div class="flex-grow-1">
-								<h3 class="h5 mb-1">Resource title three</h3>
-								<p class="text-secondary mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.</p>
-							</div>
-						</div>
-
-						<!-- item 4 -->
-						<div class="d-flex mb-3">
-							<div class="flex-shrink-0 p-3 w-25 bg-light">
-								<div class="ratio ratio-16x9 rounded bg-white"></div>
-							</div>
-							<div class="flex-grow-1">
-								<h3 class="h5 mb-1">Resource title four</h3>
-								<p class="text-secondary mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.</p>
-							</div>
-						</div>
-					</div>
+					<!-- BOTTOM STRIP -->
+					<div class="border-top border-2 mt-4"></div>
 				</div>
-
-				<!-- BOTTOM STRIP -->
-				<div class="border-top border-2 mt-4"></div>
 			</section>
 
-			<!-- SHARE A RESOURCE -->
-			<section class="mb-4">
+			<!-- ======================= SHARE A RESOURCE FORM ======================= -->
+			<section class="py-5" id="share-resource">
+				<div class="container mt-resources-main">
 
-				<!-- TITLE -->
-				<h2 class="h3 fw-bold mb-3">Share a Resource</h2>
+					<!-- TITLE -->
+					<h2 class="h3 fw-bold mb-3">Share a Resource</h2>
+					<p class="text-secondary mb-4">
+						Know a helful article, video or toolkit about SDG 4?
+						Use this form to suggest it so others can learn from it too.
+					</p>
 
-				<!-- FORM -->
-				<form class="row g-3">
+					<!-- FORM -->
+					<form 
+						id='mt-rsc-form' 
+						class="row g-3"
+						method="post"
 
-				  <div class="col-md-6">
-				    <label for="resourceTitle" class="form-label">Resource Title</label>
-				    <input type="text" class="form-control" id="resourceTitle">
-				  </div>
+						enctype="multipart/form-data" 
+						novalidate
+						>
 
-				  <div class="col-md-6">
-				    <label for="resourceType" class="form-label">Resource Type</label>
-				    <input type="text" class="form-control" id="resourceType">
-				  </div>
+					  <div class="col-md-6">
+					  	<div class="mt-input-control">
+						    <label for="resourceTitle" class="form-label">Resource Title</label>
+						    <input type="text" class="form-control" id="resourceTitle" name="resourceTitle" required>
+						    <small class="error"></small>
+						</div>
+					  </div>
 
-				  <div class="col-md-6">
-				    <label for="resourceLink" class="form-label">Resource Link</label>
-				    <input type="url" class="form-control" id="resourceLink" placeholder="https://example.com">
-				  </div>
+					  <div class="col-md-6">
+					  	<div class="mt-input-control">
+						    <label for="resourceType" class="form-label">Resource Type</label>
+						    <select class="form-select" id="resourceType" name="resourceType">
+						    	<option value="">Choose a type</option>
+						    	<option value="video">Video / Film</option>
+						    	<option value="article">Article / Blog</option>
+						    	<option value="report">Report / Research</option>
+						    	<option value="lesson-plan">Lesson plan / Classroom activity</option>
+						    	<option value="toolkit">Toolkit / Guide</option>
+						    	<option value="website">Website / Plataform</option>
+						    </select>
+						    <small class="error"></small>
+						</div>
+					  </div>
 
-				  <div class="col-md-6">
-				    <label for="resourceAuthor" class="form-label">Author / Source</label>
-				    <input type="text" class="form-control" id="resourceAuthor">
-				  </div>
+					  <div class="col-md-6">
+					  	<!-- Link control -->
+					  	<div class="mt-input-control" id="resourceLinkWrapper">
+						    <label for="resourceLink" class="form-label">Resource Link</label>
+						    <input 
+						    	type="url" 
+						    	class="form-control" 
+						    	id="resourceLink" 
+						    	placeholder="https://example.com" 
+						    	name="resourceLink"
+						    	>
+						    <small class="error"></small>	
+						    <small class="form-text text-muted">
+						    	Paste a URL where this resource can be accessed (for example a UN, UNICEF or Youtube page).
+						    </small>	
+						</div>
+					  </div>
 
-				  <div class="col-12">
-				    <label for="resourceSummary" class="form-label">Short Summary</label>
-				    <input type="text" class="form-control" id="resourceSummary">
-				  </div>
 
-				  <div class="col-12">
-				    <label for="resourceDescription" class="form-label">Description</label>
-				    <textarea class="form-control" id="resourceDescription" rows="4"></textarea>
-				  </div>
+						<div class="col-md-6">
+							<!-- File control -->
+							<div class="mt-input-control" id="resourceFileWrapper">
+							    <label for="resourceFile" class="form-label">Upload file (optional)</label>
+							    <input 
+							    	type="file" 
+							    	class="form-control" 
+							    	id="resourceFile" 
+							    	name="resourceFile"
+							    	accept=".pdf,.doc,.docx,.ppt,.pptx,.zip" 
+							    	>
+							    <small class="error"></small>	
+							    <small class="form-text text-muted">
+							    	Use this for classroom materials such as lesson plans, worksheets or toolkits.
+							    </small>	
+							</div>
+						</div>
 
-				  <div class="col-12 d-flex align-item-center justify-content-between">
 
-				  	<!-- LEFT: checkbox + label-->
-				    <div class="form-check mb-0">
-					     <input class="form-check-input" type="checkbox" id="resourceAgree">
-					     <label class="form-check-label" for="resourceAgree">
-					      	I agree to share this resource
-					      </label>
-					    </div>
+					  <div class="col-12">
+					  	<div class="mt-input-control">
+						    <label for="resourceAuthor" class="form-label">Author / Source</label>
+						    <input type="text" class="form-control" id="resourceAuthor" name="resourceAuthor">
+						    <small class="error"></small>
+						</div>
+					  </div>
 
-					    <!-- MIDDLE: BAR -->
-					    <div class="flex-grow-1 mx-3">
-					    	<div class="bg-secondary" style="height: : 6px; max-width: 200px;"></div>
-					    </div>
+					  <div class="col-12">
+					  	<div class="mt-input-control">
+						    <label for="resourceSummary" class="form-label">Short Summary</label>
+						    <input 
+						    	type="text" 
+						    	class="form-control" 
+						    	id="resourceSummary"
+						    	name="resourceSummary" 
+						    	placeholder="1-2 sentences describing why this resource is useful"
+						    >
+						    <small class="error"></small>
+						</div>
+					  </div>
 
-					    <!-- RIGHT: BUTTON -->
-					    <div>
-					    	<button type="submit" class="btn btn-dark">Submit</button>
-					    </div>
-				   </div>
-				</form>
+					  <div class="col-12">
+					  	<div class="mt-input-control">
+						    <label for="resourceDescription" class="form-label">Description</label>
+						    <textarea 
+						    	class="form-control" 
+						    	id="resourceDescription" 
+						    	rows="4"
+						    	name="resourceDescription" 
+						    	placeholder="Optional: add more detail about how this resource supports SDG 4." 
+						    ></textarea>
+						    <small class="error"></small>
+					  	</div>
+					  </div>
+
+					  <div class="col-12 d-flex align-items-center justify-content-between flex-wrap gap-3">
+
+					  	<!-- LEFT: checkbox + label-->
+					    <div class="form-check mb-0">
+						     <input class="form-check-input" type="checkbox" id="resourceAgree" name="resourceAgree" required>
+						     <label class="form-check-label" for="resourceAgree">
+						      	I agree to share this resource
+						      </label>
+						      <small class="error"></small>
+						    </div>
+
+						    <!-- RIGHT: BUTTON -->
+						    <div>
+						    	<button type="submit" class="btn mt-btn">Submit</button>
+						    </div>
+					   </div>
+					</form>
+				</div>
 			</section>
-
 		</main>
 
-		<!-- FOOTER -->
-		<div id="footer-placeholder">
-		</div>
+		<!--  Footer (loaded via main.js)r-->
+		<div id="footer-placeholder"></div>
 
-		<!--JS-->
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-		<!-- Bootstrap 5 JS Bundle -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+		<!-- Back to top button -->
+		<button
+			type="button"
+			class="mt-back-to-top"
+			aria-label="Back to top"
+		>
+			<i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+		</button>
 		
-		<!--JS Navbar-->
+		<!--   jQuery (loading navbar & footer) -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		
+		<!--  External JS  -->
 		<script src="script/main.js"></script>
+		<script src="script/mt-resources-form.js"></script>
+		<script src="script/mt-backtotop.js"></script>
 
+		<!-- Bootstrap bundle-->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 	</body>
 </html>

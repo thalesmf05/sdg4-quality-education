@@ -42,15 +42,45 @@
 	</head>
 	
 	<body>
+		
+		<!--Bootstrap Sources and Examples-->
+
+		<!--
+		   	Grid System (Rows,Columns,Containers and Grids) https://getbootstrap.com/docs/5.3/layout/grid/
+		-->
+
 		<!--Navbar-->
+
+		<!--
+			To Make it Work 
+			it has to be in a live server
+			like VScode
+		-->
+		
 		<div id="nav-placeholder">	
 		</div>
+
 	    <!--Main Container-->
+
+		<!--
+		   	Space (py-4) https://getbootstrap.com/docs/5.3/utilities/spacing/
+			Navbar (spacer-top-body) CSS
+		-->
 		
 		<div class="container py-4 spacer-top-body">
 
 
         <!--Hero Section-->
+
+			<!--
+		   	 	  Alignments (align-items-center) https://getbootstrap.com/docs/5.3/layout/gutters/
+		   	 	  Space (mb-5,g-5) https://getbootstrap.com/docs/5.3/utilities/spacing/
+				  Gutters (g-5) https://getbootstrap.com/docs/5.3/layout/gutters/
+				  Borders (border-3, border-dark, opacity-100) https://getbootstrap.com/docs/5.3/utilities/borders/
+				  Opacity (opacity-100) https://getbootstrap.com/docs/5.3/utilities/opacity/
+				  Buttons (btn, btn-dark, btn-outline-dark, rounded-0, px-4) https://getbootstrap.com/docs/5.3/components/buttons/
+				  Radius (rounded-0) https://getbootstrap.com/docs/5.3/utilities/borders/#border-radius
+			-->
 		
 			<div class="row align-items-center mb-5 g-5">
 				<div class="col-md-6">
@@ -58,22 +88,34 @@
 					<hr class="border-3 border-dark opacity-100 my-4">
 					<p class="open-sans-body-text">Learn more about how either your help or ours could improve education as a whole</p>
 					<div class="d-flex gap-3">
-						<button class="btn btn-dark px-4 rounded-0">Learn More</button>
-						<button class="btn btn-outline-dark px-4 rounded-0">Get involved</button>
+						<a href="index.html" class="btn btn-dark px-4 rounded-0">Learn More</a>
+						<a href="get_involved.html" class="btn btn-outline-dark px-4 rounded-0">Get Involved</a>
 					</div>
 				</div>
 				
 				<!--hero-placeholder-->
+
+				<!--
+		   	 	    Background Colors (bg-secondary-subtle) https://getbootstrap.com/docs/5.3/utilities/colors/
+				    Display Properties (d-flex, align-items-center, justify-content-center) https://getbootstrap.com/docs/5.3/utilities/display/
+				    Font Size (fs-1) https://getbootstrap.com/docs/5.3/utilities/font-size/
+					Hero (hero-placeholder) CSS
+					For small devices (img-fluid) https://getbootstrap.com/docs/5.3/content/images/
+			    -->
 				
+				<!--
+					Image Source: https://www.freepik.com/free-photo/people-posing-together-registration-day_18301095.htm#fromView=keyword&page=1&position=0&uuid=50969873-1590-475b-a8c1-7e64a129c5cd&query=Five+different+people
+				-->
+
 				<div class="col-md-5">
 					<div class="hero-placeholder bg-secondary-subtle w-100 d-flex align-items-center justify-content-center fs-1">
-						<img src="img/savio/education.jpeg" alt="education place" width="550" height="350">
+						<img src="img/savio/education.jpg" alt="education place" class="img-fluid">
 					</div>
 				</div>
 			</div>
 	
 			<!--Text Section-->
-			
+
 			<div class="row mb-5">
 				<div class="col-12">
 					<h2 class="anton-regular">Take a look</h2>
@@ -83,7 +125,7 @@
 			</div>
 
 			<!--Grid Section-->
-			
+
 			<div class="row g-4 mb-5">
 			
 				<!--Img 1-->
@@ -91,49 +133,147 @@
 				<div class="col-12 col-md-6 col-lg-3">
 				
 					<!--img-placeholder-->
+
+					<!--
+						Background Colors (bg-secondary-subtle) https://getbootstrap.com/docs/5.3/utilities/colors/
+						Img Placeholder (card-placeholder) CSS
+						Space (mb-3) https://getbootstrap.com/docs/5.3/utilities/spacing/
+						Text (anton-regular) CSS
+						Text (open-sans-body-text) CSS
+						For small devices (img-fluid) https://getbootstrap.com/docs/5.3/content/images/
+			        -->
+
+					<!--
+						Image Source: https://unsplash.com/photos/two-people-working-with-a-laptop-outside-greenhouse-JUivXruBs2U
+									  https://unsplash.com/@landolakesinc
+					-->
 					
 					<div class="card-placeholder bg-secondary-subtle mb-3">
-						<img src="img/savio/marco.jpg" alt="marco" width="320" height="212">
+						<img src="img/savio/marco.jpg" alt="marco" class="img-fluid">
 					</div>
 					<h4 class="anton-regular">Marco</h4>
 					<p class="open-sans-body-text">After our campaigns he has changed and started a new life</p>
 				</div>
 				
 				<!--Img 2-->
+
+				<!--
+					Image Source: https://www.pexels.com/photo/person-in-blue-denim-jacket-sitting-on-chair-while-writing-39866/
+				-->
 				
 				<div class="col-12 col-md-6 col-lg-3">
 					<div class="card-placeholder bg-secondary-subtle mb-3">
-						<img src="img/savio/sasha.jpg" alt="sasha" width="320" height="212">
+						<img src="img/savio/sasha.jpg" alt="sasha" class="img-fluid">
 					</div>
 					<h4 class="anton-regular">Sasha</h4>
 					<p class="open-sans-body-text">Had really big problem studying! Look at him now</p>
 				</div>
 				
 				<!--Img 3-->
+
+				<!--
+					Image Source: https://www.pexels.com/photo/shallow-focus-of-woman-wearing-black-and-white-t-shirt-354951/
+				-->
 				
 				<div class="col-12 col-md-6 col-lg-3">
 					<div class="card-placeholder bg-secondary-subtle mb-3">
-						<img src="img/savio/dora.avif" alt="dora" width="320" height="212">
+						<img src="img/savio/dora.jpg" alt="dora" class="img-fluid">
 					</div>
 					<h4 class="anton-regular">Dora</h4>
 					<p class="open-sans-body-text">Never felt better before</p>
 				</div>
 				
 				<!--Img 4-->
+
+				<!--
+					Image Source: https://www.pexels.com/photo/man-holding-teacup-infront-of-laptop-on-top-of-table-inside-the-room-925786/
+				-->
 				
 				<div class="col-12 col-md-6 col-lg-3">
 					<div class="card-placeholder bg-secondary-subtle mb-3">
-						<img src="img/savio/juan.webp" alt="juan" width="320">
+						<img src="img/savio/juan.jpg" alt="juan" class="img-fluid">
 					</div>
 					<h4 class="anton-regular">Juan</h4>
 					<p class="open-sans-body-text">Got the job of his dreams after our help</p>
 				</div>
 			</div>
-		</div>
-		
 
-	
-	
+			<!--Share Your Stories--> 
+			
+			<!--
+				Forms (form-floating, form-control, form-label, form-textarea, form-file) https://getbootstrap.com/docs/5.3/forms/overview/
+				Space (mb-5, mb-4, mb-3, g-3, py-2, px-5) https://getbootstrap.com/docs/5.3/utilities/spacing/
+				Background Colors (bg-light) https://getbootstrap.com/docs/5.3/utilities/colors/
+				Borders (border, rounded) https://getbootstrap.com/docs/5.3/utilities/borders/
+				Buttons (btn, btn-dark, rounded-0, px-5, py-2) https://getbootstrap.com/docs/5.3/components/buttons/
+				Floating Labels (form-floating) https://getbootstrap.com/docs/5.3/forms/floating-labels/
+				Gutters (g-3) https://getbootstrap.com/docs/5.3/layout/gutters/
+				File Input (form-file) https://getbootstrap.com/docs/5.3/forms/file-input/
+			-->
+
+			<div class="row mb-5">
+                <div class="col-12">
+                    <div class="bg-light p-5 border rounded">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 mb-4 mb-lg-0">
+                                <h2 class="anton-regular mb-3">Share Your Story</h2>
+                                <p class="open-sans-body-text lead">Did education change your life? Or have you been wantinng to improve your community?</p>
+                                <p class="open-sans-body-text">We want to hear from you. Submit your experience below for our next campaigns.</p>
+                                <i class="fa-regular fa-pen-to-square fa-5x text-secondary opacity-25 mt-3"></i>
+                            </div>
+                            <div class="col-lg-7">
+                                <form action="#">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="floatingName" placeholder="Your Name">
+                                                <label for="floatingName">Your Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                                                <label for="floatingEmail">Email Address</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea class="form-control" placeholder="Tell us your story" id="floatingStory"></textarea>
+                                                <label for="floatingStory">Your Story</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="formFile" class="form-label open-sans-body-text">Upload a photo (Optional)</label>
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                        <div class="col-12 text-end">
+                                            <button type="submit" class="btn btn-dark rounded-0 px-5 py-2">Submit Story</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+		</div>
+
+		<!--Youtube Videos
+		
+			Display https://www.youtube.com/watch?v=DZKf9l42WCo Cognivis AI
+			Modals https://www.youtube.com/watch?v=tt5uUMQgzl0 NetNinja
+			Floating Labels https://www.youtube.com/watch?v=fXsDukoPOik codeStraight
+			Flexbox https://www.youtube.com/watch?v=XI-VYE7ftNM Cognivis AI
+			Progress Bars https://www.youtube.com/watch?v=oGMgYCAarbc ARCTutorials
+			Text and Colours https://www.youtube.com/watch?v=iUCyU_U0J2E&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=3 The Net Ninja
+			Buttons https://www.youtube.com/watch?v=ZZXGmoQ4PdI&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=4 The Net Ninja
+			Containers https://www.youtube.com/watch?v=Y6q8R-9y6a0&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=6 The Net Ninja
+			Cards https://www.youtube.com/watch?v=NRoET8-8cbw&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=10 The Net Ninja
+			Navbar https://www.youtube.com/watch?v=7AT1X9Z41sA&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=9 The Net Ninja
+			List Groups https://www.youtube.com/watch?v=gwgeMole3gs&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=12 The Net Ninja
+
+		--->
 		
 		<!--Footer-->	
 		<div id="footer-placeholder">
@@ -147,6 +287,19 @@
 			
 		<!--JS Navbar-->
 		<script src="script/main.js"></script>
+
+		<!--
+		One of the biggest reasons to  why I used so many Bootstrap codes is,
+		Since I am not very experienced with web development,
+		I wanted to make sure the website would be responsive and work well on different devices.
+		Also being a group project, it makes it easier for me and my group to edit and do each
+		individual parts without breaking the overall design and layout of the website.
+
+		I also used Gemini AI to help me with some of the Bootstrap codes suggestions,
+		but I made sure to understand and learn from the suggestions it provided.
+		It did not write the entire code for me, I just used it as a tool to assist me in the process.
+		
+		-->
 	
 	</body>
 	

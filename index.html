@@ -1,181 +1,290 @@
 <!DOCTYPE html>
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Matheus Borges Mota Reis">
-		<title>Home</title>
 
-		<!-- Google Fonts -->
+		<title>SDG 4 - Quality Education | Home</title>
+
+		<!-- SEO -->
+		<meta name="keywords" content="SDG 4, Quality Education, Sustainable Development Goals">
+		<meta name="title" content="SDG 4 - Quality Education">
+		<meta name="description" content="Overview of Sustainable Development Goal 4 (Quality Education): context, statistics and key targets.">
+		<meta name="robots" content="index, follow">
+		<meta name="language" content="English">
+
+		<!-- Google Fonts (Anton + Open Sans) -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
-		<!-- Icons -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 		
 		<!-- Bootstrap -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+		<!-- Font Awesome Icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/style.css">
 	</head>
+	<body class="body mtBody page-home">
 
-	<body class="body">
+		<!-- NAVBAR (loaded via jQuery in main.js) -->
+		<div id="nav-placeholder"></div>
 
-		<!-- NAVBAR -->
-		<div id="nav-placeholder">
-		</div>
+		<!-- ================================== MAIN CONTENT ================================== -->
+		<main class="mt-main-body">
 
-		<!-- MAIN CONTENT -->
-		<main class="container py-4 spacer-top-body">
+			<!-- ============================== HERO: SDG4 intro + spinning wheel ============
+					Wheel layout inspired by: https://globalgoals.org 
+					Adapted from CodePen by Felipe Mendez: https://codepen.io/felipemendez/pen/nqMaKY
+					Modified by Matheus Borges Mota Reis
+			================================================================================== -->
+			<section class="mt-hero-sdg4">
+				<div class="container py-4">
+					<div class="row g-4 align-items-center">
 
-			<!-- HERO -->
-			<section class="mb-4">
-				<div class="row g-4 align-items-center">
+						<!-- Left: main heading and intro text -->
+						<div class="col-lg-6">
+							<p class="mt-hero-eyebrow mb-2">SDG • Sustainable Development Goal 4</p>
+							<h1 class="display-4 mb-3 mt-main-heading">GOAL 4 - Quality Education</h1>
+							<p class="mb-3 mt-hero-txt">
+								Guarantee a quality and equitable education, offering lifelong learning opportunities for everyone around the globe.
+							</p>
+						</div>	
+						
+						<!-- Right: circular navigation wheel -->
+						<div class="col-lg-6 d-flex justify-content-center mt-wheel-section">
+							<div class="mt-sdg-wheel">
+								
+								<!-- Center label -->
+								<div class="mt-sdg-wheel-center">
+									<h3 class="mb-0">Explore</h3>
+								</div>
 
-					<!-- Left Column (text) -->
-					<div class="col-lg-6">
-						<h1 class="display-4 mb-3">SDG 4 - Quality Education</h1>
-						<p class="text-secondary mb-3">Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean.</p>
-						<div class="">
-							<a class="btn btn-dark btn-lg d-inline-block mt-2 px-5 py-3" href="#">Button</a>
-							<a class="btn btn-dark btn-lg d-inline-block mt-2 px-5 py-3" href="#">Button</a>
-						</div>
-					</div>	
-
-					<!-- Right Column (img)-->
-					<div class="col-lg-6">
-						<div class="bg-light p-3 rounded">
-							<div class="ratio ratio-16x9 rounded bg-white"></div> 
-							<!-- changer for: <img class="w-100 h-100 object-fit-cover" src=""-->
+								<!-- Wheel items -->
+								<ul class="mt-sdg-wheel-orbit">
+									<li><a class="mt-sdg-wheel-item mt-wheel-label" href="#">Campaigns</a></li>
+									<li><a class="mt-sdg-wheel-item mt-wheel-label" href="#">Targets</a></li>
+									<li><a class="mt-sdg-wheel-item mt-wheel-label" href="#">Stories</a></li>
+									<li><a class="mt-sdg-wheel-item mt-wheel-label" href="#">Resources</a></li>
+									<li><a class="mt-sdg-wheel-item mt-wheel-label" href="#">Challenges</a></li>
+									<li><a class="mt-sdg-wheel-item mt-wheel-label" href="#">About SDG4</a></li>
+									<li><a class="mt-sdg-wheel-item mt-wheel-label" href="#">Get Involved</a></li>
+									<li><a class="mt-sdg-wheel-item mt-wheel-label" href="#">What's SDG4</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- STRIP "STATISTIC" -->
-			<section class="bg-dark text-white border-top border-bottom">
+			<!-- ============================== WHAT IS SDG-4? ============================== -->
+			<section class="py-5 mt-section-sdg4">
+				<div class="container py-4">
+					<div class="row g-4 align-items-center">
+
+						<!-- Left: explanation text -->
+						<div class="col-lg-7">
+							<p class="mt-section-eyebrow">Overview</p>
+							<h2 class="h2 fw-bold mb-3">What is SDG 4?</h2>
+
+							<p class="mt-section-lead">
+								Goal 4 aims to provide accessible and high-quality education for everyone at every stage of life.
+							</p>
+
+							<p class="mt-section-body">
+								To reduce inequities and disparities in education, SDG • 4 recognises that education is crucial for enabling upward socioeconomic mobility. It can open doors for:
+							</p>
+
+							<ul class="mt-section-list">
+								<li><strong>Access:</strong> reducing gaps for children in poverty, rural areas, conflict zones and migrant communities.</li>
+								<li><strong>Quality:</strong> improving teaching, school infrastructure and learning materials.</li>
+								<li><strong>Lifelong learning:</strong> supporting skills for work, active citizenship and digital participation.</li>
+							</ul>
+
+							<p class="mt-section-body">
+								For SDG • 4 to be achieved globally, government and partners need to prioritise education funding, support teacher training and expand safe, inclusive learning spaces.
+							</p>
+						</div>
+
+						<!-- Right: image card + CTA button
+								Image from Pexel (royalty-free educational photo.)
+						 -->
+						<div class="col-lg-5">
+							<div class="mt-section-card">
+								<img 
+									class="img-fluid rounded mt-sdg4-img" 
+									src="img/matheus/what-is-sdg4.jpg" 
+									alt="Boy studying in a classroom"
+								>
+								<a href="#" class="mt-section-cta-btn mt-btn mt-btn-full">
+									Take action
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============================== STRIP "STATISTIC" ==============================
+					Statistics and links taken from UNESCO & UNICEF:
+					https://www.unesco.org/en/teachers
+					https://www.unesco.org/en/articles/251m-children-and-youth-still-out-school-despite-decades-progress-unesco-report
+					https://data.unicef.org/resources/are-children-really-learning-foundational-skills-report/
+			================================================================================== -->
+			<section class="mt-statistic-strip">
 				<div class="container">
 					<div class="row g-0 text-center">
 
-						<!-- Column 1 -->
+						<!-- Column Left -->
 						<div class="col-lg-4">
 							<div class="p-4">
-								<p class="mb-0 small opacity-75">Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam.</p>
+								<h2 class="fw-bold mb-0 mt-statistic-number">69M</h2>
+								<p class="mt-statistic-txt">Additional teachers needed by 2030. Without them, many children will remain in overcrowded classrooms without the support of a qualified educator.</p>
+								<a class="mt-statistic-link" href="https://www.unesco.org/en/teachers">→ Learn more</a>
 							</div>
 						</div>
 
-						<!-- Column 2 -->
-						<div class="col-lg-4 border-start border-end border-white border-opacity-25">
+						<!-- Column Middle -->
+						<div class="col-lg-4">
 							<div class="p-4">
-								<h2 class="h3 fw-bold mb-0">STATISTIC</h2>
+								<h2 class="fw-bold mb-0 mt-statistic-number">251M</h2>
+								<p class="mt-statistic-txt">Children and young out of school. Missing the most basic learning opportunities, and chances to develop skills and break the cycle of poverty</p>
+								<a class="mt-statistic-link" href="https://www.unesco.org/en/articles/251m-children-and-youth-still-out-school-despite-decades-progress-unesco-report">→ Learn more</a>
 							</div>
 						</div>						
 
-						<!-- Column 3 -->
+						<!-- Column Right -->
 						<div class="col-lg-4">
 							<div class="p-4">
-								<p class="mb-0 small opacity-75">Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam.</p>
+								<h2 class="fw-bold mb-0 mt-statistic-number">617M</h2>
+								<p class="mt-statistic-txt">Children and adolescents are in school but not learning. Globally, more than half of young people finish primary school without basic reading and maths skills.</p>
+								<a class="mt-statistic-link" href="https://data.unicef.org/resources/are-children-really-learning-foundational-skills-report/">→ Learn more</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- WHAT IS SDG-4? -->
-			<section class="py-5">
-				<div class="row g-4 align-items-center">
+			<!-- ============================== TARGETS ============================== -->
+			<section class="py-5 mt-section-targets">
+				<div class="container py-4">
+					<h3 class="h2 fw-bold mb-3">Targets</h3>
 
-					<!-- Left Column (text) -->
-					<div class="col-lg-6">
-						<h2 class="h2 fw-bold mb-3">What is SDG 4?</h2>
-						<p class="text-secondary mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+					<!-- Target 4.1 -->
+					<article class="mb-5 mt-target">
+						<div class="row g-4 align-items-start">
 
-						Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+							<!-- Left: target illustration -->
+							<div class='col-lg-4'>
+								<div class="mt-target-card">
+									<img class="img-fluid rounded" src="img/matheus/MC_Target_4.1.png" alt="Target 4.1 graphic">
+								</div>
+							</div>
 
-						Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-					</div>
+							<!-- Right: description -->
+							<div class="col-lg-8">
+								<p class="mt-target-label">Target 4.1</p>
+								<h3 class="h4 mt-target-title">Free, equitable and quality primary and secondary education</h3>
 
-					<!-- Right Column (img)-->
-					<div class="col-lg-6">
-						<div class="bg-light p-3 rounded">
-							<div class="ratio ratio-16x9 rounded bg-white"> <!-- 4:3 = 75% -->
+								<p class="mt-target-summary">Target 4.1 is about making sure every child can finish free, safe and high-quality primary and secondary school, and acctually learn to read, write and use maths with confidence.</p>
+
+								<ul class="mt-target-list">
+									<li><strong>Strengthen basic schooling:</strong> invest in public schools, teachers and learning materials so that classrooms are not overcrowded.</li>
+									<li><strong>Focus on real learning:</strong> track whether students are gaining core skills, not just moving from grade to grade.</li>
+									<li><strong>Close the gap:</strong> support learners in rural areas, conflic zones and low-income communities so they are not left behind by 2030.</li>
+								</ul>
+							</div>
 						</div>
+					</article>
+
+					<!-- Target 4.2 -->
+					<article class="mb-5 mb-5 mt-target">
+						<div class="row g-4 align-items-start">
+
+							<!-- Left: target illustration -->
+							<div class='col-lg-4'>
+								<div class="mt-target-card">
+									<img class="img-fluid rounded" src="img/matheus/MC_Target_4.2.png" alt="Target 4.2 graphic">
+								</div>
+							</div>
+
+							<!-- Right: description -->
+							<div class="col-lg-8 ">
+								<p class="mt-target-label">Target 4.2</p>
+								<h3 class="h4 mt-target-title">Early childhood development and pre-primary education</h3>
+
+								<p class="mt-target-summary">Target 4.2 recognises that the earliest years shape a child's brain, hearlth and confidence. Quality early childhood care and pre-primary education give children a strong start before they ever walk into primary school.</p>
+
+								<ul class="mt-target-list">
+									<li><strong>Early year matter:</strong> play-based learning, stories and games help children build language, curiosity and social skills.</li>
+									<li><strong>Support for families:</strong> parents and caregivers need access to affordable childcare, nutrition and health services.</li>
+									<li><strong>Ready for school:</strong> when children attend pre-primary, they are more likely to stay in school and succeed later on.</li>
+								</ul>
+							</div>
+						</div>
+					</article>
+
+					<!-- Target 4.3 -->
+					<article class="mb-5 mb-5 mt-target">
+						<div class="row g-4 align-items-start">
+
+							<!-- Left: target illustration -->
+							<div class='col-lg-4'>
+								<div class="mt-target-card">
+									<img class="img-fluid rounded" src="img/matheus/MC_Target_4.3.png" alt="Target 4.3 graphic">
+								</div>
+							</div>
+
+							<!-- Right: description -->
+							<div class="col-lg-8 ">
+								<p class="mt-target-label">Target 4.3</p>
+								<h3 class="h4 mt-target-title">Equal access to affordable technical, vocational and higher education</h3>
+
+								<p class="mt-target-summary">Target 4.3 focuses on giving young people and adults fair access to techincal training, vocational courses and higher education, without cost becoming an impossible barrier.</p>
+
+								<ul class="mt-target-list">
+									<li><strong>Open door to TVET and college:</strong> expand places in technical institutes, apprenticeships and universities for learners from every background.</li>
+									<li><strong>Make study affordable:</strong> use scholarships, grants and flexible fees so students are not forced to drop out because of money.</li>
+									<li><strong>Support lifelong skills:</strong> create pathwats for adults to reskill and upskill as technology and labour markets change.</li>
+								</ul>
+							</div>
+						</div>
+					</article>
+
+					<!-- Button linking to more targets page -->
+					<div class="text-center mt-3">
+						<a class="mt-btn mt-btn-large" href="#">Read full SDG 4 targets</a>
 					</div>
+
 				</div>
 			</section>
-
-			<!-- TARGETS -->
-			<section class="py-5">
-				<h3 class="h2 fw-bold mb-3">Targets</h3>
-
-				<!-- ITEMS: -->
-
-				<!-- Item 1 -->
-				<article class="mb-5">
-					<div class="row g-4 align-items-start">
-						<!-- Left: img -->
-						<div class='col-lg-4'>
-							<div class="bg-light rounded p-3">
-								<div class="ratio ratio-1x1 rounded bg-white"></div> <!--changer for: <img class="" src=""-->
-							</div>
-						</div>
-
-						<!-- Right: text -->
-						<div class="col-lg-8">
-							<h3 class="h5 mb-2">Lorem ipsum dolor sit amet.</h3>
-
-							<p class="text-secondary mb-2">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-							Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-
-							<p class="text-secondary mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-						</div>
-					</div>
-				</article>
-
-				<!-- Item 2 -->
-				<article class="mb-5">
-					<div class="row g-4 align-items-start">
-						<!-- Left: img -->
-						<div class='col-lg-4'>
-							<div class="bg-light rounded p-3">
-								<div class="ratio ratio-1x1 rounded bg-white"></div> <!--changer for: <img class="" src=""-->
-							</div>
-						</div>
-
-						<!-- Right: text + buttons -->
-						<div class="col-lg-8 ">
-
-
-							<h3 class="h5 mb-2">Lorem ipsum dolor sit amet.</h3>
-
-							<p class="text-secondary mb-2">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-							Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-
-							<p class="text-secondary mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-				
-							<div>			
-								<a class="btn btn-dark btn-lg d-inline-block mt-2 px-5 py-3" href="#">Button</a>
-								<a class="btn btn-dark btn-lg d-inline-block mt-2 px-5 py-3" href="#">Button</a>
-							</div>
-						</div>
-					</div>
-				</article>
-
-			<!--  Footer placeholder-->
-			<div id="footer-placeholder"></div>
-			
-			<!--   jQuery   -->
-			<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-			
-			<!--  External JS  -->
-			<script src="script/main.js"></script>
-
-			<!-- Bootstrap -->
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 		</main>
+
+		<!--  Footer (loaded via main.js)r-->
+		<div id="footer-placeholder"></div>
+
+		<!-- Back to top button -->
+		<button
+			type="button"
+			class="mt-back-to-top"
+			aria-label="Back to top"
+		>
+			<i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+		</button>
+		
+		<!--   jQuery (loading navbar & footer) -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		
+		<!--  External JS  -->
+		<script src="script/main.js"></script>
+		<script src="script/mt-wheel.js"></script>
+		<script src="script/mt-backtotop.js"></script>
+
+		<!-- Bootstrap bundle-->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 	</body>
 </html>
 

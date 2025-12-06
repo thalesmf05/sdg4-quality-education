@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="My First Web Desing Project">
+		<meta name="keywords" content="HTML, CSS, JavaScript, Registration Form">
+		<meta name="author" content="Rúbia Lana">
+		<title>Registration Form</title>
+		<link rel="icon" type="image/x-icon" href="img/rubia/mainLogo.png">
+		
+		<!-- fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	
+	<body class="rubia_registration_form">
+		
+		<!-- NAVBAR -->
+			<div id="nav-placeholder"></div>
+		
+		<div class="container">
+		
+			<div class="container_registration_r">
+			
+				<h1 class="title_form_r">Register Here</h1>
+				
+				<form id="form" action="/" >
+					
+					<div class="user_info">
+					
+						<div class="input_box">
+							<p>
+								<label for="name">Name</label>
+								<input 
+									type="text" 
+									id="name" 
+									name="name" 
+									placeholder="Enter your full name"
+								>
+								<span id="errorInName" class="error"></span>
+							</p>
+						</div>
+						
+						<div class="input_box">
+							<p>
+								<label for="username">Username</label>
+								<input 
+									type="text" 
+									id="username" 
+									name="username" 
+									placeholder="Enter your username"
+								>
+								<span id="errorInUsername" class="error"></span>
+							</p>
+						</div>
+						
+						<div class="input_box">
+							<p>
+								<label for="email">Your Email</label>
+								<input 
+									type="text" 
+									id="email"
+									name="email" 
+									placeholder="Enter your e-mail"
+								>
+								<span id="errorInEmail" class="error"></span>
+							</p>
+						</div>
+						
+						<div class="input_box">
+							<p>
+								<label for="phoneNumber">Phone Number</label>
+								<input
+									type="text"
+									id="phoneNumber"
+									name="phoneNumber"
+									placeholder="Enter your phone number"
+								>
+								<span id="errorInPhoneNumber" class="error"></span>
+							</p>
+						</div>
+							
+						<div class="input_box">
+							<p>
+								<label for="password">Password</label>
+								<input
+									type="password"
+									id="password"
+									name="password"
+									placeholder="Enter your password"
+								>
+								<span id="errorInPassword" class="error"></span>
+							</p>
+						</div>
+							
+						<div class="input_box">
+							<p>
+								<label for="confirmPassword">Confirm Password</label>
+								<input
+									type="password"
+									id="confirmPassword"
+									name="confirmPassword"
+									placeholder="Confirm your password"
+								>
+								<span id="errorInConfirmPassword" class="error"></span>
+							</p>
+						</div>
+						
+					</div>
+				
+					<div class="gender_box">
+						<span class="gender_title">Gender (Optional)</span>
+					
+						<div class="gender_category">
+							<input type="radio" name="gender" id="male">
+							<label for="male">Male</label>
+							
+							<input type="radio" name="gender" id="female">
+							<label for="female">Female</label>
+							
+							<input type="radio" name="gender" id="other">
+							<label for="other">Other</label>
+							
+							<span id="error"></span>
+						</div>
+						
+						<div class="submit_button">
+							<input type="submit" value="Register">
+						</div>
+					</div>
+				
+				</form>
+				
+			</div>
+				
+		</div>  <!-- end of container -->
+		
+
+		<!-- jQuery -->
+			<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+			
+		<!-- external JS -->
+			<script src="script/main.js"></script>
+			
+		<script>
+			const form = document.getElementById("form");
+			const name = document.getElementById ("name");
+			const username = document.getElementById("username");
+			const email = document.getElementById("email");
+			const phoneNumber = document.getElementById("phoneNumber");
+			const password = document.getElementById("password");
+			const confirmPassword = document.getElementById("confirmPassword");
+			//get element by id is for gettin on html the element that has this id, so for ex the document.getElementById name is going to be related to the input with the id name
+			
+			form.addEventListener("submit", e => { //add event listener submit is for adding a function when the user click to submit
+				e.preventDefault(); //it avoid the form to be sent without everything being complete and reload the page, so it is blocked of being automatically sent
+				
+				validateInputs(); //validateInputs call the functionthat is going to validate everything before the user submits it so it checks if everything is correct as blocking the user to send a phone number that has less than 10 numbers
+			});
+			
+			const setError = (element, message) => {
+				const inputControl = element.parentElement; //element.parentElement is for getting the father element of the input that for my registration form is the div class="input_box"
+				const errorDisplay = inputControl.querySelector('.error'); //to get the span inside the input where the message in case of a error is going to appear
+				
+				errorDisplay.innerText = message; //this displays the inner text message for errors
+				inputControl.classList.add("error");
+				inputControl.classList.remove("success");
+				
+			};
+			
+			//in the setError the error is added and the success removed, in the setSuccess is the opposite
+			
+			const setSuccess = element => {
+				const inputControl = element.parentElement;
+				const errorDisplay = inputControl.querySelector(".error");
+				
+				errorDisplay.innerText = ''; //as this is correct no text needs to be added
+				inputControl.classList.add("success");
+				inputControl.classList.remove("error");
+			};
+			
+			const isValidEmail = email => {
+				const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // expression to validate an email that confirms that the email is really an email so it needs to have an @ and a dot 
+				return re.test(String(email).toLowerCase()); 
+			} // sthing(email).toLowerCase() that transforms everything in lower case as emails don't diferenciate upper case letters from lower case letters. and re.test is to test again if the email is in a valid format
+			
+			
+			const validateInputs = () => { //here the imputs values are get and the extra spaces are removed with trim
+				const usernameValue = username.value.trim(); //trim removes blank spaces only in the start and in the end of the inputs
+				const emailValue = email.value.trim();
+				const passwordValue = password.value.trim();
+				const confirmPasswordValue = confirmPassword.value.trim();
+				const nameValue = name.value.trim();
+				const phoneNumberValue = phoneNumber.value.trim();
+				const validationProcess = [name, username, email, phoneNumber, password, confirmPassword]; //this devines that the validation proccess includes all the elements so then the const validation confirm it goint to check if each of them are avlidated. if one element is missing here then the confirmation may be considered a success even though the one that is missing is an error
+				const validationConfirmed = validationProcess.every(input => input.parentElement.classList.contains("success")); //the ".every" confirms each of the const are success
+				
+			
+			
+			if(usernameValue === "") { //here I did the same we do with scratch that creates situation where you want the asnwer to be validated or not, in this case if the username is empty it is going to require one, and then when the user finally add one it is going to be confirmed
+				setError(username, "Username is required")
+			} else {
+				setSuccess(username);
+			}
+			
+			if(emailValue === "") {
+				setError(email, "Email is required");
+			} else if (!isValidEmail(emailValue)) {
+				setError(email, "Please provide a valid email address");
+			} else {
+				setSuccess(email);
+			}
+			
+			if(passwordValue === "") {
+				setError(password, "Password is required");
+			} else if (passwordValue.length < 8) {
+				setError(password, "Password must include at least 8 characters")
+			} else {
+				setSuccess(password);
+			}
+			
+			if(confirmPasswordValue === "") {
+				setError(confirmPassword, "Please confirm your password");
+			} else if (confirmPasswordValue !== passwordValue) {
+				setError(confirmPassword, "Passwords don't match");
+			} else {
+				setSuccess(confirmPassword);
+			}
+			
+			if (nameValue === "") {
+				setError(name, "Name is required");
+			} else if (nameValue.length < 3) {
+				setError (name, "Please provide a valid name");
+			} else {
+				setSuccess(name);
+			}
+			
+			if (phoneNumberValue === "") {
+				setError (phoneNumber, "Phone number is required");
+			} else if (phoneNumberValue.length < 10 ) {
+				setError(phoneNumber, "Please enter a valid phone number with 10 numbers");
+			} else {
+				setSuccess(phoneNumber);
+			}
+			
+			if (validationConfirmed) { //here i set an alert that is going to tell the user that the form was validated and the form is going to be cleaned, and then the class success ig going to be removed so if the user try againg to fill the form it is not going to be in success and aprove something by mistake if its not correct
+				alert(nameValue + ", congratulations, now you are registered");
+				form.reset();
+				validationProcess.forEach(input => input.parentElement.classList.remove("success"));
+			}
+			
+		};
+		</script>
+		
+	</body>
+
+</html>

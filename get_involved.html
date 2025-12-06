@@ -40,79 +40,368 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 		
   </head>
-  
+		
+  	<!--Bootstrap Sources and Examples-->
+
+  	<!--
+		Grid System (Rows,Columns,Containers and Grids) https://getbootstrap.com/docs/5.3/layout/grid/
+  		Alignments (Display Flex, Justify and Align) https://getbootstrap.com/docs/5.3/layout/gutters/
+		Size (min-height-100) https://getbootstrap.com/docs/5.3/layout/gutters/
+	-->
+
 	<body class="d-flex flex-column min-vh-100">
 
 		<!--NAVBAR-->
-		<!--To Make it Work it has to be in a live server-->
+
+		<!--
+			To Make it Work (Nav and Footer)
+			 it has to be in a live server
+					like VScode
+		-->
 		
 		<div id="nav-placeholder">	
 		</div>
 
-		<!--HERO SECTION-->
+		<!--HERO-->
+
+		<!--
+		    Space (py-5,my-5) https://getbootstrap.com/docs/5.3/utilities/spacing/
+			Navbar (spacer-top-body) CSS
+		    Text Alignment (text-center) https://getbootstrap.com/docs/5.3/utilities/text/
+			Grid System (Large Screen 10/12) https://getbootstrap.com/docs/5.3/layout/grid/
+		-->
 		
-		<section class="container py-5 my-5">
+		<section class="container py-5 my-5 spacer-top-body">
 		  <div class="row justify-content-center text-center">
-			<div class="col-lg-8">
+			<div class="col-lg-10">
 			
 			  <!--Heading-->
+
+			  <!--
+		   	 	  Font Weights (fw-bold) https://getbootstrap.com/docs/5.3/utilities/text/#font-weight
+				  Borders (border-3) https://getbootstrap.com/docs/5.3/utilities/borders/
+				  Display Properties (d-inline-block) https://getbootstrap.com/docs/5.3/utilities/display/
+			  -->
 			  
 			  <h1 class="display-4 fw-bold border-bottom border-top border-dark border-3 py-2 mb-4 d-inline-block anton-regular">
 				Get Involved
 			  </h1>
 			  
 			  <!--text-->
+
+			  <!--
+			  	  Typography (lead) https://getbootstrap.com/docs/5.3/content/typography/
+			  	  Space (mb-5) https://getbootstrap.com/docs/5.3/utilities/spacing/
+			  -->
 			  
 			  <p class="lead mb-5 open-sans-body-text">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+				Join our efforts to make a difference in the lives of those in need for educational quality.
+				By just taking a small action or a few minutes of your time, you can help us create a better world 
+				for everyone around us.
 			  </p>
 
 			  <!--Image-->
 			  
 				  <!--grey box-->
 				  
-				  <div class="bg-secondary bg-opacity-50 w-100 mb-4 d-flex align-items-center justify-content-center" style="height: 300px;">
-					<span class="h3 text-secondary fw-bold opacity-50">IMG</span>
+				   <!--
+			  			Ratio (ratio-16x9) https://getbootstrap.com/docs/5.3/helpers/ratio/
+						Shadows (shadow-lg) https://getbootstrap.com/docs/5.3/utilities/shadows/
+						Spacing (mb-4) https://getbootstrap.com/docs/5.3/utilities/spacing/
+						Borders (rounded, border, border-dark, border-2) https://getbootstrap.com/docs/5.3/utilities/borders/
+						Background Colors (bg-light) https://getbootstrap.com/docs/5.3/utilities/colors/
+						Opacity (opacity-50) https://getbootstrap.com/docs/5.3/utilities/opacity/
+						Text Colors (text-dark) https://getbootstrap.com/docs/5.3/utilities/colors/
+						Font Awesome Icons (fas fa-hands-helping) https://fontawesome.com/icons/hands-helping
+						Video Tag w3 school https://www.w3schools.com/tags/tag_video.asp
+						Html (Autoplay, Loop, Muted, Playsinline) https://www.youtube.com/watch?v=BAx2GaMW2qA
+			 	    -->
+
+				  <!-- 
+			  			Original Video Source: https://pixabay.com/videos/people-commerce-shop-busy-mall-6387/
+				   -->
+						
+					<div class="d-flex align-items-center justify-content-center h4">
+						<video class="w-100 d-block rounded" autoplay loop muted>
+  						<source src="vid/savio/people.mp4" type="video/mp4">
+ 						 Your browser does not support the video tag.
+						</video>
+					</div>
 				  </div>
 
 			  <!--Small text-->
+
+			  <!--
+			  	  Text Colors (text-muted) https://getbootstrap.com/docs/5.3/utilities/colors/
+				  Font Size (small) https://getbootstrap.com/docs/5.3/utilities/text/#font-size
+				  Typography (open-sans-body-text) CSS
+			  -->
+
 			  <p class="text-muted small open-sans-body-text">
-				Excepteur sint occaecat cupidatat non proident.
+				From here on, you can choose to either support us with donations or become a volunteer.
 			  </p>
 			</div>
 		  </div>
 		</section>
 
-		<!--Column-->
-		
-		<section class="border-top border-2 border-dark py-5">
+		<!--Columns-->
+
+		<!--
+		    Gutters (gx-5) https://getbootstrap.com/docs/5.3/layout/gutters/
+		-->
+
+		<!--
+			All stats and opportunities are aligned with the SDG 4 targets
+			https://sdgs.un.org/goals/goal4
+		-->
+
+		<section class="border-top border-2 border-dark py-5 bg-light">
 		  <div class="container py-4">
 			<div class="row gx-5">
 			  
 			  <!--Left Column-->
 			  
-			  <div class="col-md-6 text-center mb-5 mb-md-0">
-				<h3 class="border-bottom border-top border-dark border-3 py-2 mb-4 d-inline-block anton-regular">Learn More</h3>
-				<p class="mb-4 open-sans-body-text">
-				  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-				</p>
-				<button class="btn btn-secondary rounded-0 px-5 py-2 text-uppercase">Button</button>
+			  <!--
+		   	 	  Buttons (btn, btn-dark, rounded-0, px-5, py-2, text-uppercase, shadow-sm) https://getbootstrap.com/docs/5.3/components/buttons/
+				  Radius (rounded-0) https://getbootstrap.com/docs/5.3/utilities/borders/#border-radius
+				  Text Transform (text-uppercase) https://getbootstrap.com/docs/5.3/utilities/text/#text-transformation
+				  mt-auto (align button at bottom) https://getbootstrap.com/docs/5.3/utilities/display/
+				  progress bars (bg-info,aria-valuenow) https://getbootstrap.com/docs/5.3/components/progress/
+				  list group https://getbootstrap.com/docs/5.3/components/list-group/
+				  layout (d-flex, flex-column, mb-5, mb-md-0,mt-auto) https://getbootstrap.com/docs/5.3/utilities/display/
+				  modals https://getbootstrap.com/docs/5.3/components/modal/
+				  borders (border-bottom, border-top, border-dark, border-3) https://getbootstrap.com/docs/5.3/utilities/borders/
+				  display (d-inline-block) https://getbootstrap.com/docs/5.3/utilities/display/
+				  Typography (fw-bold) https://getbootstrap.com/docs/5.3/utilities/text/#font-weight
+				  Buttons (btn, btn-outline-success) https://getbootstrap.com/docs/5.3/components/buttons/
+			  -->
+
+			  <div class="col-md-6 text-center mb-5 mb-md-0 d-flex flex-column">
+
+				<div class="mb-auto">
+
+                    <i class="fas fa-hand-holding-usd fa-3x mb-3 text-dark"></i>
+
+                    <h3 class="border-bottom border-top border-dark border-3 py-2 mb-4 d-inline-block anton-regular">Support</h3>
+
+                    <p class="mb-4 open-sans-body-text">
+
+                    Your contributions directly fund the people who are in need of quality education and resources.
+					
+					</p>
+                    
+                    <!--Progress Bars-->
+					 
+                    <div class="mb-4 text-start">
+                        
+                        <p class="mb-3 fw-bold border-bottom pb-2">Our Global Targets</p>
+                        
+                        <p class="mb-1 small fw-bold"><!--Target 4.1--> Free Primary & Secondary</p>
+
+                        <div class="progress mb-3" role="progressbar" aria-label="Target 4.1" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+
+                            <div class="progress-bar bg-success w-100">100% Target Goal</div> 
+
+                        </div>
+                        
+                        <p class="mb-1 small fw-bold"><!--Target 4.6--> Literacy & Numeracy</p>
+
+                        <div class="progress mb-4" role="progressbar" aria-label="Target 4.6" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+
+                            <div class="progress-bar bg-info text-dark w-75">75% Literacy Rate</div>
+
+                        </div>
+                    </div>
+                </div>
+
+				<button class="btn btn-dark rounded-0 px-5 py-2 text-uppercase shadow-sm mt-auto" data-bs-toggle="modal" data-bs-target="#donateModal">
+
+                    Donate Now
+
+                </button>
 			  </div>
 
 			  <!--Right Column-->
+
+			  <!--
+		   	 	  Display Properties (d-inline-block) https://getbootstrap.com/docs/5.3/utilities/display/
+				  Radius (rounded-0) https://getbootstrap.com/docs/5.3/utilities/borders/#border-radius
+				  Fast Awesome Icons (fas fa-users) https://fontawesome.com/icons/users
+				  Buttons (btn, btn-dark, rounded-0, px-5, py-2, text-uppercase, shadow-sm) https://getbootstrap.com/docs/5.3/components/buttons/
+				  Text Transform (text-uppercase) https://getbootstrap.com/docs/5.3/utilities/text/#text-transformation
+				  layout (d-flex, flex-column, mb-5, mb-md-0,mt-auto) https://getbootstrap.com/docs/5.3/utilities/display/
+				  list group https://getbootstrap.com/docs/5.3/components/list-group/
+			  -->
 			  
-			  <div class="col-md-6 text-center">
-				<h3 class="border-bottom border-top border-dark border-3 py-2 mb-4 d-inline-block anton-regular">How you can help</h3>
-				<p class="mb-4 open-sans-body-text">
-				  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-				</p>
-				<button class="btn btn-secondary rounded-0 px-5 py-2 text-uppercase">Button</button>
+			  <div class="col-md-6 text-center d-flex flex-column">
+
+				<div class="mb-auto"> 
+
+                    <i class="fas fa-users fa-3x mb-3 text-dark"></i>
+
+                    <h3 class="border-bottom border-top border-dark border-3 py-2 mb-4 d-inline-block anton-regular">Volunteer</h3>
+
+                    <p class="mb-4 open-sans-body-text">
+
+                    Become a mentor, tutor, or advocate to help substantially increase the supply of qualified teachers and skills.
+
+                    </p>
+
+                    <!--Opportunities-->
+
+					<!--
+					  List Group https://getbootstrap.com/docs/5.3/components/list-group/
+				 	  Borders (border-secondary) https://getbootstrap.com/docs/5.3/utilities/borders/
+				 	  Text Alignment (text-start) https://getbootstrap.com/docs/5.3/utilities/text/#text-alignment
+				 	  Font Weights (fw-bold) https://getbootstrap.com/docs/5.3/utilities/text/#font-weight
+				 	  Spacing (mb-4, mb-3, pb-2, px-0) https://getbootstrap.com/docs/5.3/utilities/spacing/
+					  Flexbox (d-flex, justify-content-between, align-items-center) https://getbootstrap.com/docs/5.3/utilities/display/
+					  Styling (bg-transparent) https://getbootstrap.com/docs/5.3/utilities/background/#background-color
+					  Buttons (btn, btn-outline-success) https://getbootstrap.com/docs/5.3/components/buttons/
+					-->
+
+                    <div class="mb-4 text-start">
+                        <p class="mb-3 fw-bold border-bottom pb-2">Current Opportunities</p>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent px-0 border-secondary">
+                                Vocational Mentors <!--(Target 4.4)-->
+                                
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent px-0 border-secondary">
+                                Teacher Support <!--(Target 4.c)-->
+                                
+                            </li>
+                             <!-- Added 3rd item to balance height with progress bars -->
+                            <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent px-0 border-secondary">
+                                Inclusion Advocate <!--(Target 4.5)-->
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+				<button class="btn btn-dark rounded-0 px-5 py-2 text-uppercase shadow-sm mt-auto" data-bs-toggle="modal" data-bs-target="#volunteerModal">Join the Team</button>
 			  </div>
 
 			</div>
 		  </div>
 		</section>
 
+        <!--Donation-->
+
+		<!--
+			Modals https://getbootstrap.com/docs/5.3/components/modal/
+			Close Button (btn-close) https://getbootstrap.com/docs/5.3/components/modal/#close-button
+			Outline Buttons (btn, btn-outline-success) https://getbootstrap.com/docs/5.3/components/buttons/
+		-->
+
+        <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                
+                <form action="#">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="donateModalLabel">Support <!--Goal 4--></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>Your contribution directly supports specific SDG 4 targets.</p>
+                        <div class="d-grid gap-2 col-8 mx-auto">
+                            
+                            <button class="btn btn-outline-success" type="submit">$25 - Early Childhood Dev <!--(Target 4.2)--></button>
+                            <button class="btn btn-outline-success" type="submit">$50 - Vocational Training <!--(Target 4.4)--></button>
+                            <button class="btn btn-outline-success" type="submit">$100 - Higher Ed Scholarships <!--(Target 4.b)--></button>
+                            
+                        
+                           </div>
+                          </div>
+                  	    </div>
+                	  </div>
+                    </div>
+                 </form>
+			  </div>
+           </div>
+        
+
+        <!--Volunteer-->
+
+		<!--
+		   	Modals https://getbootstrap.com/docs/5.3/components/modal/
+			Close Button (btn-close) https://getbootstrap.com/docs/5.3/components/modal/#close-button
+			List Group https://getbootstrap.com/docs/5.3/components/list-group/
+			Radio Buttons (form-check-input) https://getbootstrap.com/docs/5.3/forms/checks-radios/#radio
+			Checkbox (form-check) https://getbootstrap.com/docs/5.3/forms/checks-radios/#checkbox
+			Buttons (btn, btn-secondary, btn-primary) https://getbootstrap.com/docs/5.3/components/buttons/
+		-->
+
+        <div class="modal fade" id="volunteerModal" tabindex="-1" aria-labelledby="volunteerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                
+                <form action="#">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="volunteerModalLabel">Join Our Team</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Select your preferred role:</p>
+                        
+                        <div class="list-group">
+                            <label class="list-group-item d-flex gap-2">
+                                <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios" id="listGroupRadios1" value="" checked>
+                                <span>
+                                    Literacy Tutor 
+                                    <small class="d-block text-body-secondary">Remote or In-Person</small>
+                                </span>
+                            </label>
+                            <label class="list-group-item d-flex gap-2">
+                                <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios" id="listGroupRadios2" value="">
+                                <span>
+                                    Inclusive Education Support 
+                                    <small class="d-block text-body-secondary">Special Needs Focus</small>
+                                </span>
+                            </label>
+                            <label class="list-group-item d-flex gap-2">
+                                <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios" id="listGroupRadios3" value="">
+                                <span>
+                                    School Upgrade Team 
+                                    <small class="d-block text-body-secondary">Logistics & Planning</small>
+                                </span>
+                            </label>
+                            <label class="list-group-item d-flex gap-2">
+                                <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios" id="listGroupRadios4" value="">
+                                <span>
+                                    Teacher Training Asst 
+                                    <small class="d-block text-body-secondary">Workshop Support</small>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Apply Now</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+
+		<!--Youtube Videos
+		
+			Display https://www.youtube.com/watch?v=DZKf9l42WCo Cognivis AI
+			Modals https://www.youtube.com/watch?v=tt5uUMQgzl0 NetNinja
+			Floating Labels https://www.youtube.com/watch?v=fXsDukoPOik codeStraight
+			Flexbox https://www.youtube.com/watch?v=XI-VYE7ftNM Cognivis AI
+			Progress Bars https://www.youtube.com/watch?v=oGMgYCAarbc ARCTutorials
+			Text and Colours https://www.youtube.com/watch?v=iUCyU_U0J2E&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=3 The Net Ninja
+			Buttons https://www.youtube.com/watch?v=ZZXGmoQ4PdI&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=4 The Net Ninja
+			Containers https://www.youtube.com/watch?v=Y6q8R-9y6a0&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=6 The Net Ninja
+			Cards https://www.youtube.com/watch?v=NRoET8-8cbw&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=10 The Net Ninja
+			Navbar https://www.youtube.com/watch?v=7AT1X9Z41sA&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=9 The Net Ninja
+			List Groups https://www.youtube.com/watch?v=gwgeMole3gs&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=12 The Net Ninja
+
+			(Net Ninja is the one I watched the most for Bootstrap 5)
+			
+		--->
 
 
 
@@ -128,6 +417,18 @@
 		
 		<!--JS Navbar-->
 		<script src="script/main.js"></script>
+
+	<!--
+		One of the biggest reasons to  why I used so many Bootstrap codes is,
+		Since I am not very experienced with web development,
+		I wanted to make sure the website would be responsive and work well on different devices.
+		Also being a group project, it makes it easier for me and my group to edit and do each
+		individual parts without breaking the overall design and layout of the website.
+
+		I also used Gemini AI to help me with some of the Bootstrap codes suggestions,
+		but I made sure to understand and learn from the suggestions it provided.
+		It did not write the entire code for me, I just used it as a tool to assist me in the process.
+	-->
     
   </body>
 </html>

@@ -1,6 +1,8 @@
-// Form validation script]
-// Authour: Thales Ferrari
+// Form validation script
+// Authour: Thales Marques Ferrari de Almeida
 //source https://youtu.be/CYlNJpltjMM?si=lw17KHzxEGv7bjvU
+
+//This gets all the elements by their id and store in a const
 const form = document.getElementById('form');
 const inputFirstName = document.getElementById('inputFirstName');
 const inputSurname = document.getElementById('inputSurname');
@@ -16,13 +18,13 @@ const optionError = document.getElementById('optionError');
 
 
 
-// Disable native validation so our custom checks always run, even when the browser
-// thinks the pattern/type is invalid (e.g. phone numbers with spaces or dashes).
+
 form.setAttribute('novalidate', true); // Disable native validation, source: https://stackoverflow.com/questions/3090369/disable-validation-of-html-form-elements
 
+//Even listener for when the user clicks on submmit button 
 form.addEventListener('submit', event => {
     
-    event.preventDefault();
+    event.preventDefault(); //prevent from sending the form 
     
     const isFormValid = validateInputs(); //this functions returns true or false based on form verification
     
@@ -35,6 +37,7 @@ form.addEventListener('submit', event => {
 
 });
 
+//Event listener for when the user press the button reset
 form.addEventListener('reset', event => { //reset error/success messages on form reset
     resetErrors();
 });
@@ -83,7 +86,7 @@ const setError = (element, message) => { //set error message
 
 }
 
-const setSucces = element => {
+const setSucces = element => { //set sucess message 
     let inputControl;
     //follow the same logic as setNeutral function, the only difference is that this function sets the success class
     if (element.id === 'contactError' || element.id === 'optionError') {
@@ -133,7 +136,8 @@ const validatePhone = phone => { //phone validation
 }
 
 
-const validateInputs = () => {
+const validateInputs = () => { //this is the function that handles the validation of the whole form 
+    //.trim() all inputs to make sure there are no spaces as it can get it the way of the validation
     const firstNameValue = inputFirstName.value.trim();
     const surnameValue = inputSurname.value.trim();
     const emailValue = inputEmail.value.trim();
@@ -200,5 +204,7 @@ const validateInputs = () => {
         setSucces(inputComments);
     }
 
-    return isValid;
+    return isValid; //returns true of false based in the validation
+                    //if true, form is valid
+                    //if false, form is not valid
 };

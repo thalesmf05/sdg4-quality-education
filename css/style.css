@@ -17,19 +17,27 @@
 
 
 /* NavBar
-   Author: Thales
+   Author: Thales Marques Ferrari de Almeida
 */
-.links-nav {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
+ .links-nav { /*this is the ul element inside the navbar */
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
 }
-.links-nav a, .links-nav ul a{
+.links-nav a, .links-nav ul a{ 
 	font-size: 20px;
+	text-decoration: none;
+}
+.links-nav > li > a { 
+	color: #000
+}
+.links-nav > li > a:hover {
+	color: #432b55;
+	text-decoration: none; /*removes the underline on hover*/
 }
 .links-nav li {
 	padding: 8px 12px;
@@ -37,35 +45,35 @@
 .spacer-top-body{
 	margin-top: 4rem;
 }
-.navbar-logo{
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0;
+.navbar-logo{ /* make sure the logo and title are aligned */
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0;
 }
 .logo-title{
-color: black;
-font-size: 1.3rem;
+	color: black;
+	font-size: 1.3rem;
 }
 
-.navbar-logo img{
-  height: 48px;
-  width: auto;
+.navbar-logo img{ /*logo image size and responsiveness*/
+	height: 48px;
+	width: auto;
 }
 
 /*scrolling effect navbar*/
-.navbar {
-  background-color: transparent;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  padding-top: 0.35rem;
-  padding-bottom: 0.35rem;
+.navbar { /*set the initial state of the navbar*/
+	background-color: transparent;
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
+	padding-top: 0.35rem;
+	padding-bottom: 0.35rem;
 }
 
 
 /*When user scrolls more than 56px change the color*/
 .navbar-scrolled {
-  background-color: rgba(200, 200, 200, 0.97); /* darker gray for contrast */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+	background-color: rgba(200, 200, 200, 0.97); /* darker gray for contrast */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 /*  Navbar dropdown  */
@@ -101,7 +109,7 @@ source: https://youtu.be/NaE2DMCkMkk?si=irN1dnEl6ar3fV93*/
 .links-nav .nav-link{
 	position: relative;
 }
-.links-nav .nav-link::before{
+.links-nav .nav-link::before{ /*creates a pseudo element before each link*/
 	content: '';
 	position: absolute;
 	left: 0;
@@ -111,42 +119,35 @@ source: https://youtu.be/NaE2DMCkMkk?si=irN1dnEl6ar3fV93*/
 	background-color: #432b55;
 	transition: width 0.3s ease;
 }
-.links-nav .nav-link:hover::before{
+.links-nav .nav-link:hover::before{ /*expands the underline on hover*/
 	width: 100%;
 }
-
-
 /*End navbar*/
 
+
+
 /*	CSS for campaing page
-	Author: Thales*/
+	Author: Thales Marques Ferrari de Almeida
+*/
 
 /*Hover zoom img effect
 Sources: https://www.w3schools.com/howto/howto_css_zoom_hover.asp and https://youtube.com/shorts/-4PtUNKZr8M?si=-x04MyQYTLYg2XLB */
 
-.wrapper-et{
+.wrapper-et{ /*wrapper for the zoom effect on images*/
 	overflow: hidden;
 	border-radius: 5px;
 }
-.wrapper-et img{
+.wrapper-et img{ /*image inside the wrapper*/
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	transition: 1s ease;
 }
-.wrapper-et img:hover{
+.wrapper-et img:hover{ /*zoom effect on hover*/
 	transform: scale(1.1);
 }
 /*End img effect*/
 
-
-/*Spacers for images*/
-.spacer-left-campaigns{
-	padding-left: 20px;
-}
-.spacer-bellow-campaigns{
-	padding-bottom: 20px;
-}
 
 /*wrap image and add text in the image
 Sources: https://youtu.be/Si4ViAvvnwU?si=R38BF-6bvPxQ2DKY and https://www.w3schools.com/howto/howto_css_image_text.asp
@@ -173,6 +174,13 @@ Sources: https://youtu.be/Si4ViAvvnwU?si=R38BF-6bvPxQ2DKY and https://www.w3scho
 }
 .col-lg-4 .text-inside-img h3 {
 	font-size: 2.0rem;
+}
+/*form styling*/
+.wrapper-form-t{
+	background-color: #F7F4F2;
+	padding: 20px;
+	border-radius: 13px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /*Form validation control*/
@@ -279,10 +287,6 @@ source: https://stackoverflow.com/questions/37836821/line-break-on-mobile-phone-
         .mobile-break { display: none; }
     }
 
-
-
-
-
 /*Stories page
 Author: Savio Miano*/
 .hero-placeholder {
@@ -294,25 +298,25 @@ Author: Savio Miano*/
     height: 200px;
     border-radius: 4px;
 }
+/*End author Thales Marques Ferrari de Almeida*/
 
 
 
-/** CSS for Rubia's Pages**/
-.aboutsdr_r {
+/** Start of Author: Rúbia Lana **/
+
+.aboutsdg_r {
 	background-color: white;
 	color: #2A140E;
 }
 
-.cabecalho {
+.header_sdr_r {
 	position: relative;
 	width: 100%;
 	max-width: 100%;
 }
 
-/** banner_sdg_r **/
-
 .img_top_sdg_r {
-	background-image: url("../img/rubia/library.jpg");
+	background-image: url("../img/rubia/pexels-img8.jpg");
 	width: 100%;
 	height: 60vh;
 	background-size: cover;
@@ -320,19 +324,10 @@ Author: Savio Miano*/
 	transition: height 0.5s ease;
 	margin: 0 auto;
 	position: relative;
-	/**overflow: hidden; /** hide the content that gets over of the limit **/
-	/**height: 240px;**/
-	/**max-height: 280px;**/
-	/**object-fit: cover; /** ajusta a imagem se precisar preencher, ou seja, se necessário ele corta **/
-	/**opacity: 0.6; **//** vai de 0 a 1 **/
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	/**height: 100dvh; **//** ocupa a altura total da tela , diferenca entre vh e dvh? tava vh e eu troquei p dvh	**/
-	/**background-color: black;**/
-	vertical-align: flex-start;
+	align-items: flex-start;
 	margin-bottom: 30px;
-	transition: 25vh;
 }
 
 .shrink-banner {
@@ -342,35 +337,26 @@ Author: Savio Miano*/
 .img_top_sdg_r.shrink-banner h1, .img_top_sdg_r.shrink-banner h2 {
 	opacity: 0;
 	height: 0;
-	overflow: hidden;
+	overflow: hidden; /** overflow hidden makes everything that is overflowing the div be cutted so we don't see it overflowing  **/
 }
-
-
-
 
 .banner_sdg_r img {
-	width: 100%; /** to assure the image is going to complete all the space **/
+	width: 100%; 
 	display: block; /** to remove extra spaces down the image **/
 }
-
-
-
-
-
 
 .text_top_sdg_r {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
-	text-transform: uppercase;
-	/**background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);**/
+	transform: translate(-50%, -50%); /** left50% + top50% + translate(-50%, -50%) is how div's are centralized **/
+	text-transform: uppercase; /** text-transform uppercase makes all the text in uppercase, meanwhile lowercase makes all the text be in lowercase, and captilize makes the firts leters be in upercase **/
 	background: white;
 	background-size: 200%;
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: animate-gradient 2.5s linear infinite;
+	animation: animate-gradient 2.5s linear infinite; /** linear infinite is for the animation don't stop, and the 2.5s is the time for the animation to be complete, and then repeat again as it's an infinite animation **/
 	-webkit-text-stroke: 0.3px black;
 }
 
@@ -378,78 +364,62 @@ Author: Savio Miano*/
 	to {
 		background-position: 200px;
 	}
-}
-
-/**	
-	position: absolute;
-	z-index: 2;
-	font-size: 32px;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-**/
-
-
-
-
+} /** keyframes is used to define the animation you want **/
 
 .title_top_sdg_r h1 {
-	font-family: "Anton", sans-serif;
-	font-size: 4rem; /** root em, que é relativo ao tamanho da fonte do elemento raiz da pagina que é html, 1rem é igual a 12px na maioria dos navegadores. 
-	ao usar o rem mesmo que o usuario mude a fonte do navegador ou de zoom sla tudo aumenta proporcionalmente, aí isso facilita pra manter as proporcoes entre titulos subititulos e paragrafos
-
-	px é fixo
-	rem é escala com o navegador**/
+	font-size: 4rem;
 	color: white;
-	/**text-shadow: 2px 2px 5px black, 2px 2px 4px gray;**/ /** significado por ordem: deslocamento x, deslocamento y, desfoque, cor **/
 }
-
-
-
-
 
 .subtitle_top_sdg_r h2 {
 	font-size: 2rem;
-	font-family: "Anton", sans-serif;
-	/**text-shadow: 2px 2px 5px white, 2px 2px 4px gray;**/
 }
 
-
-
-
-
-.text_right_sdg_r {
-	
+/** to change size of text in sreens less than 1024px **/
+@media (max-width: 1024px) {
+	.title_top_sdg_r h1 {
+		font-size: 3.7rem !important;
+	}
+	.subtitle_top_sdg_r h2 {
+		font-size: 2.7rem !important;
+	}
 }
+/** !important is used when you want to create a diferent thing that you whant the computer to select as main. for example now I defined that the font size was 4 rem, but if the screen max width is 1024 px the text is going to be 3.7 rem and the computer is going to ignore the other option and consider only the one that is tagged as important if the conditon matches(the screen size in this situation) **/
 
-
-
-
+/** to change size of text in small screens, start to change in ipad mini but works for smartphones too, if I need to change again I just neet to add a smaller screen that is only for smatphones, not ipads **/
+@media (max-width: 768px) {
+	.title_top_sdg_r h1 {
+		font-size: 3.5rem !important;
+	}
+}
 
 .text_to_justify {
 	text-align: justify;
 }
 
-
-
-
-
-.second_row_buttons_sdg_r {
-	
-}
-
 .btns_to_hover {
 	display: flex;
 	justify-content: space-between;
+	text-align: center;
 }
-
-
-
 
 .btn_hoover_me_sdg_r {
 	padding: 9px 25px;
-	/**padding: 15px 40px;**/
+	border: none;
+	outline: none;
+	color: #FFF;
+	cursor: pointer;
+	position: relative;
+	z-index: inherit; /** z-index controls the layers of the things in the page, it only works for elements with a defined position, that can be defined with position: relative/absolute/fixed/sticky. z-index -1 puts the things in the back of the z-index 0 or z-index auto, inherit makes the value of the index be received from its base element so if the father element is z-index 1, it is also going to be z-index 1**/
+	border-radius: 50px; 
+	background-color: transparent;
+	display: block;
+}
+
+.btn4_hoover_me_sdg_r {
+	width: 100%;
+	text-align: center;
+	padding: 9px 25px;
 	border: none;
 	outline: none;
 	color: #FFF;
@@ -458,27 +428,29 @@ Author: Savio Miano*/
 	z-index: inherit;
 	border-radius: 50px; 
 	background-color: transparent;
+	display: block; /** display block was used for the a cover the full width of its space. at first I was using <button> and inside of it <a>, but it was having a problem that if I clicked in the button in a part the the link did't reach the link wasn't oppening, so I searched why it was happening and the reason was because the <a> tag was inside of the button, when I was supposed to put only the <a> tag and treat it as a button on css. and then when I did it I noticed that the <a> ignored the "width: 100%", but this is because of is inline configuration, so display: block could "break" it **/
+	
+	/** display block = cover all the line; inline cover only the content but stays in the same line; inline-block = is the same as inline, but it allows you to choose the size; grid = for layouts in col/row; none = for it to desapear of the page; flex = to organize elements in one col/row **/
 }
 
-.btn_hoover_me_sdg_r::after{
-	content: "";
+.btn_hoover_me_sdg_r::after, .btn4_hoover_me_sdg_r::after {
+	content: ""; /** the tag content: '' needs to be used with the pseudo-elements because without it they don't appear. the pseudo-elements are: before, after, active, hover, focus. before and after (used for decoration) can add extra content to the element meanwhile active focus and hover (used for interaction) can change the style of it according to its state. hover changes the element when the mouse is over it, active changes the element when it is being clicked and focus when it is being selected **/
 	z-index: -1;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: #2A140E; /** #432b55 #333 **/
+	background-color: black; /** to change here the color **/
 	left: 0;
 	top: 0;
 	border-radius: 60px;
 }
 
-
-.btn_hoover_me_sdg_r::before {
+.btn_hoover_me_sdg_r::before, .btn4_hoover_me_sdg_r::before {
 	content: "";
 	background: linear-gradient(
 		45deg,
 		#FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00C8, #FF0000
-	); 
+	); /** the first and the last color are the same because it makes the transition smooth **/
 	position: absolute;
 	top: -2px; 
 	left: -2px;
@@ -487,12 +459,23 @@ Author: Savio Miano*/
 	width: calc(100% + 4px);
 	height: calc(100% + 4px);
 	filter: blur(8px);
-	
-	/** animation **/
 	animation: glowing 20s linear infinite;
 	transition: opacity .3s ease-in-out;
 	border-radius: 10px;
 	opacity: 0;
+}
+
+.btn_hoover_me_sdg_r:hover::before, .btn4_hoover_me_sdg_r:hover::before {
+	opacity: 1;
+}
+
+.btn_hoover_me_sdg_r:active:after, .btn4_hoover_me_sdg_r:active:after {
+	background: transparent;
+}
+
+.btn_hoover_me_sdg_r:active, .btn4_hoover_me_sdg_r:active {
+	color: #000;
+	font-weight: bold;
 }
 
 @keyframes glowing {
@@ -500,319 +483,1359 @@ Author: Savio Miano*/
 	50% {background-position: 400% 0;}
 	100% {background-position: 0 0;}
 }
-
-.btn_hoover_me_sdg_r:hover::before {
-	opacity: 1;
-}
-
-.btn_hoover_me_sdg_r:active:after {
-	background: transparent;
-}
-
-.btn_hoover_me_sdg_r:active {
-	color: #000;
-	font-weight: bold;
-}
-
-
-
-
-
-
-.btn4_hoover_me_sdg_r {
-	width: 100%;
-	text-align: center;
-	padding: 9px 25px;
-	/**padding: 15px 40px;**/
-	border: none;
-	outline: none;
-	color: #FFF;
-	cursor: pointer;
-	position: relative;
-	z-index: inherit;
-	border-radius: 50px; 
-	background-color: transparent; /** aq para mudar a cor do botao **/
-}
-
-.btn4_hoover_me_sdg_r::after{
-	content: "";
-	z-index: -1;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-color: #2A140E; /** #333 **/
-	left: 0;
-	top: 0;
-	border-radius: 60px;
-}
-
-
-.btn4_hoover_me_sdg_r::before {
-	content: "";
-	background: linear-gradient(
-		45deg,
-		#FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00C8, #FF0000
-	);
-	position: absolute;
-	top: -2px; 
-	left: -2px;
-	background-size: 600%;
-	z-index: -1;
-	width: calc(100% + 4px);
-	height: calc(100% + 4px);
-	filter: blur(8px);
-	
-	/** animation **/
-	animation: glowing 20s linear infinite;
-	transition: opacity .3s ease-in-out;
-	border-radius: 10px;
-	opacity: 0;
-}
-
-@keyframes glowing {
-	0% {background-position: 0 0;}
-	50% {background-position: 400% 0;}
-	100% {background-position: 0 0;}
-}
-
-.btn4_hoover_me_sdg_r:hover::before {
-	opacity: 1;
-}
-
-.btn4_hoover_me_sdg_r:active:after {
-	background: transparent;
-}
-
-.btn4_hoover_me_sdg_r:active {
-	color: #000;
-	font-weight: bold;
-}
-
 
 .a_sdg_r{
-	font-family: "Open Sans", sans-serif;
 	font-weight: 500;
 	font-size: 16px;
 	color: white;
 	text-decoration: none;
+	
 }
 
 .a_sdg_r:hover {
 	color: white;
 }
 
-
-.button_four_sdg_r{
-	color: white;
-	align-content: center;
+#img_add_border_sdg_r {
+	border: 10px double #432b55; /** double is a borther effect that makes the border have two lines **/
 	width: 100%;
-	height: 40px;
-	background-color: pink;
-	border: none;
-	border-radius: 50px;
-	cursor:pointer;
-	transition: all 0.3s ease 0s;
-}
-
-
-
-
-
-.button_four_sdg_r:hover{
-	color: white;
-	background-color: #FF2967;
-	padding: 9px 25px;
-}
-
-
-
-
-
-.d-flex flex-wrap gap-2 mt-3 {
-	
-}
-
-
-
-
-
-.second-line_sdg_r mt-2 {
-	
-}
-
-
-
-
-
-.second-line_sdg_r mt-2 {
-	
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
-
-.zoom-wrapper_sdg_r {
-	height: 200px;
-	overflow: hidden;
-	border-radius: 16px;
-}
-
-
-
-
-
-.zoom-wrapper_sdg_r img {
-	object-fit: cover;
-	transition: transform 0.8s;
 	height: 100%;
 }
-
-
-
-
-
-.zoom-wrapper_sdg_r img:hover {
-	transform: scale(1.5);
-} 
-**/
-
-
-
-
-/* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	/**background-color: pink;**/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.nav_button_sdg_r{
-	font-family: "Open Sans", sans-serif;
-	font-weight: 500;
-	font-size: 16px;
-	color: #edf0f1;
-	text-decoration: none;
-}
-
-
-
-
-
-.logo_sdg_r {
-	cursor: pointer; /** n ta pegando essa teg, olha dnv	**/
-}
-
-
-
-
-
-
 
 .line_for_division {
-	color: black;
-	border: none;
-	border-top: 2px solid #0000;
-	margin: 20px 0;
+	height: 1px;
+	width: 98%;
+	overflow: hidden;
+	background-size: 500% 100%;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
-
-
-
-#img_add_border_sdg_r {
-	border: 10px double #432b55;
-	width: 100%;
-	height: 100%;
+.line_for_division::before {
+	content: '';
+	position: absolute;
+	inset: 0; /** inset here is to assure the element + before is going to cover all the space that the element without before cover without needing to type bottom/top/left/right:0 because without is the efecct was not apearing  **/
+	background: linear-gradient(to right, grey, blue, grey, blue, grey);
+	background-size: 500% 100%;
+	animation: tryingByMyself 20s linear infinite;
+	border-radius: 500px;
 }
 
+@keyframes tryingByMyself {
+	0% {
+		background-position: 0% 0;
+	}
+	100% {
+		background-position: 500% 0;
+	}
+}
 
 .add_margin_sdg_r {
 	margin-bottom: 100px;
 }
 
-
-
-
-
-/**
-
-.nav_links_sdg_r {
-	list-style: none;
-}
-
-.nav_links_sdg_r li {
-	display: inline-block;
-	padding: 0px 20px;
-}
-
-.nav_links_sdg_r li a {
-	transition: all 0.3s ease 0s;
-}
-
-.nav_links_sdg_r li a:hover {
-	color: #FF2967;
-}
-
-.nav_button_sdg_r {
-	color: black;
-	padding: 9px 25px;
-	background-color: pink;
-	border: none;
-	border-radius: 50px;
-	cursor:pointer;
-	transition: all 0.3s ease 0s;
-}
-
-.nav_button_sdg_r:hover {
-	color: white;
-	background-color: #FF2967;
-}
-**/
-
-
-.inside_top_image_target_r {
-	margin: 35px;
-	color: white;
-}
-
-.image_left_target_r {
-	height: 500px;
-	width: 200;
+.whatToDo_sdg_r {
+	margin-bottom: 35px;
 }
 
 .top_target_r {
-	background-image: url("../img/rubia/library.jpg");
-	background-size: 500px;
+	background-image: url("../img/rubia/unsplash-img5.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	padding: 0 2rem;
+}
+
+
+.inside_top_image_target_r {
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 4rem;
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+	margin: 0.5rem 0;
+}
+
+.inside_top_image_target_r1 {
+	font-size: 4rem;
+}
+
+.inside_top_image_target_r2 {
+	font-size: 2.5rem;
+	padding-bottom: 5px;
+}
+
+@media (min-width: 1440px) {
+	.target_html .aboutsdg4_html {
+		zoom: 1.5 !important;
+	}
+	#tranding {
+		padding: 7rem 0 !important;
+	}
+}
+
+@media (min-width: 2560px) {
+	.target_html .aboutsdg4_html {
+		zoom: 1.7 !important;
+	}
+}
+
+@media (min-width: 3860px) {
+	.target_html .aboutsdg4_html {
+		zoom: 2.5 !important;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 1.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 1rem;
+	background: #797979; /** change it **/
+	transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #222224; /** change it too **/
+}
+
+::-webkit-scrollbar-track {
+	background: #f9f9f9;
+}
+
+.section-heading {
+	font-size: 3rem;
+	color: var(--primary);
+	padding: 2rem 0;
+}
+
+#tranding {
+	padding: 4rem 0 !important;
+}
+
+#tranding .tranding-slider {
+	height: 52rem;
+	padding: 2rem 0;
+	position: relative;
+}
+
+.tranding-slide {
+	width: 37rem;
+	height: 42rem;
+	position: relative;
+	border-radius: 2rem !important;
+}
+
+@media (max-width: 500px) {
+	.tranding-slide, .tranding-slide-img img {
+		width: 28rem !important;
+		height: 36rem !important;
+	}
+	
+	#tranding .tranding-slider {
+		height: 45rem !important;
+	}
+}
+
+.tranding-slide .tranding-slide-img img {
+	width: 37rem;
+	height: 42rem;
+	border-radius: 2rem !important;
+	object-fit: cover;
+}
+
+.tranding-slide .tranding-slide-content {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.tranding-slide-content .top_text_slider_target_r {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	color: var(--white);
+}
+
+.tranding-slide-content .tranding-slide-content-bottom {
+	position: absolute;
+	bottom: 2rem;
+	left: 2rem;
+	color: var(--white);
+}
+
+.target_subtitle_inside_slider {
+	padding-top: 1rem;
+	display: flex;
+	gap: 1rem;
+}
+
+.target_subtitle2_inside_slider ion-icon {
+	color: var(--primary);
+}
+
+.swiper-slide-shadow-left, .swiper-slide-shadow-right {
+	display: none;
+}
+
+.tranding-slider-control {
+	position: relative;
+	bottom: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1rem;
+	width: 100%;
+}
+
+.tranding-slider-control .swiper-button-next {
+	left: 58% !important;
+	transform: translateX(-58%) !important;
+}
+
+@media (max-width: 990px) {
+	.tranding-slider-control .swiper-button-next {
+		left: 70% !important;
+		transform: translateX(-70%) !important;
+	}
+	
+	.tranding-slider-control .swiper-button-prev {
+		left: 30% !important;
+		transform: translateX(-30%) !important;
+	}
+}
+
+@media (max-width: 450px) {
+	.tranding-slider-control .swiper-button-next {
+		left: 80% !important;
+		transform: translateX(-80%) !important;
+	}
+	
+	.tranding-slider-control .swiper-button-prev {
+		left: 20% !important;
+		transform: translateX(-20%) !important;
+	}
+}
+
+.tranding-slider-control .slider-arrow {
+	background: var(--white);
+	width: 3.5rem;
+	height: 3.5rem;
+	border-radius: 50%;
+	left: 42%;
+	transform: translateX(-42%);
+	filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1)); /** drop-shadow creates a shadow **/
+}
+
+.tranding-slider-control .slider-arrow ion-icon {
+	font-size: 2rem;
+	color: #222224;
+}
+
+.tranding-slider-control .slider-arrow::after {
+	content: '';
+}
+
+.tranding-slider-control .swiper-pagination {
+	position: relative;
+	width: 15rem;
+	bottom: 1rem;
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+	filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-active {
+	background: var(--primary);
+}
+
+@property --angle {
+	syntax: "<angle>"; /** is used to change the angle of the property **/
+	initial-value: 0deg; /** defines the angle you want to change it to in the start **/
+	inherits: false; /** defines that nothing is going to be inherited (as with z-index that I can set it to be inherited, so this cancel it) **/
+}
+
+.icon_add_border_sdg_r {
+	margin: 0 auto;
+	padding: 2em;
+	width: 300px;
+	background: white;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.icon_add_border_sdg_r::after, .icon_add_border_sdg_r::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width:100%;
+	background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545); /** conic-gradient is a circle gradient **/
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	padding: 3px;
+	animation: 3s spin linear infinite;
+	border-radius: 10px;
+}
+
+.icon_add_border_sdg_r::before {
+	filter: blur(1.5rem); /** filters change an element visually, they can be blur, drop-shadow, contrast, etc. blur it loose focus **/
+	opacity: 0.5; 
+}
+
+@keyframes spin{
+	from {
+		--angle: 0deg;
+	}
+	to{
+		--angle: 360deg;
+	}
+}
+
+.image_left_target_r {
+	width: 100%;
+	object-fit: cover;
+	box-sizing: border-box;
+	margin: 5px;
+	
+}
+
+.img_bottom_traget_r {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	box-sizing: border-box;
+	margin: 5px;
+	overflow: hidden;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.zoom_r {
+	overflow: hidden;
+}
+
+.zoom_r img {
+	object-fit: cover;
+	transition: transform 0.8s;
+	/**height: 100%;**/
+	overflow: hidden;
+}
+
+.zoom_r:hover img {
+	transform: scale(1.1);
+	overflow: hidden;
+}
+
+.align-text-inside-img-r {
+	position: absolute;
+	color: white;
+	font-size: 15px;
+	text-align: center;
+	bottom: 5px;
+	text-shadow: 2px 2px 1px black; /** horizontal position, vertical position, opacity of shadow and color **/
+	justify-content: center;
+	left: 50%;
+	transform: translateX(-50%);
+	font-weight: bold;
+}
+
+.holder {
+	display: block;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+}
+
+.holder img {
+	position: relative;
+	text-align: center;
+	justify-content: center;
+}
+
+.align_center_r {
+	text-align: center;
+	justify-content: center;
+}
+
+.aboutsdg_r h1, .aboutsdg_r h2, .aboutsdg_r h3, .aboutsdg_r h4, .aboutsdg_r h5, .target_r h1, .target_r h2, .target_r h3, .target_r h4, .target_r h5, .rubia_registration_form h1, .rubia_registration_form h2, .rubia_registration_form h3, .rubia_registration_form h4, .rubia_registration_form h5 {
+	font-family: "Anton", sans-serif;
+} /** did't add h6 because i am sure i did't use it in any page **/
+
+.aboutsdg4_container p, .target_container p, .container_registration_r p {
+	font-family: "Open Sans", sans-serif;
+}
+
+.name_one_target_slider p .top_text_slider_target_r p {
+	font-weight: bold !important;
+}
+
+.rubia_registration_form * {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.rubia_registration_form {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: url('../img/rubia/unsplash-img4.jpg');
+	background-size: cover;
+}
+
+.container_registration_r {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 650px;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 28px;
+	margin: 0 28px;
+	border-radius: 10px;
+	box-shadow: inset -2px 2px 2px white;
+}
+
+.rubiaRegistration {
+	font-size: 12px;
+	font-weight: 600;
+	text-align: center;
+	padding-bottom: 6px;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+	border-bottom: solid 1px white;
+}
+
+.user_info {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 20px 0;
+}
+
+.input_box:nth-child(2n) {
+	justify-content: end;
+	
+}
+
+.input_box {
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	padding-bottom: 10px;
+}
+
+.input_box label {
+	width: 95%;
+	color: white;
+	font-size: 14px;
+	font-weight: 400;
+	margin: 5px 0;
+}
+
+.input_box input {
+	height: 40px;
+	width: 95%;
+	border-radius: 7px;
+	outline: none;
+	border: 1px solid grey;
+	padding: 0 10px;
+	font-size: 12px;
+}
+
+.gender_box {
+	color: white;
+	font-size: 14px;
+	font-weight: 600;
+	/**border-bottom: 1px solid white;**/
+}
+
+.gender_category {
+	margin: 15px 0;
+	color: white;
+}
+
+.gender_category label {
+	padding: 0 20px 0 5px;
+}
+
+.gender_category label, .gender_category input, .submit_button input {
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.submit_button {
+	margin-top: 40px;
+}
+
+.submit_button input {
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	font-size: 14px;
+	padding: 10px;
+	border: none;
+	border-radius: 50px;
+	background-color: white;
+}
+
+.submit_button input:active {
+	color: white;
+	background-color: black;
+}
+
+@media (max-width: 600px) {
+	.container_registration_r {
+		min-width: 280px;
+	}
+	
+	.input_box {
+		margin-bottom: 12px;
+		width: 100%;
+	}
+	
+	.input_box:nth-child(2n) {
+		justify-content: space-between;
+	} /** nth-child selects the child of the elemet i selected. (1) selects the first child, (2) selects the second child of the element, (2n) selects all the childs in even numbers ex: 2,4,6, and (2n+1)selects all the childs in odd numbers position ex: 1,3,5 **/
+	
+	.gender_category {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+	
+	.user_info {
+		max-height: 380px;
+		overflow: auto;
+	}
+	
+	.user_info -webkit-scrollbar {
+		width: 0;
+	}
+}
+
+.title_form_r {
+	font-size: 25px;
+	text-align: center;
+	color: white;
+}
+
+#errorInUsername, #errorInName, #errorInEmail, #errorInPassword, #errorInConfirmPassword, #errorInPhoneNumber {
+	color: red;
+	font-size: 12px;
+}
+
+.target_html *, .target_html *::before, .target_html *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+.target_html:root {
+	--primary: #ec994b;
+	--white: #ffffff;
+	--bg: #f5f5f5;
+}
+
+.target_html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+.registrationH4_r {
+	font-size: 30px;
+}
+
+.registrationForm_r {
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: underline;
+	text-decoration-color: black;
+} 
+
+/**
+References:
+
+	https://www.youtube.com/watch?v=li-ylRo7VEc
+	https://www.youtube.com/watch?v=b_8fHNIHFk4&t=191s
+	https://www.youtube.com/watch?v=ezP4kbOvs_E
+	https://www.youtube.com/shorts/-4PtUNKZr8M
+	https://youtu.be/G8mYjB_sT0o?si=NM1zX5kS7MCnfA8E
+	https://youtu.be/CYlNJpltjMM?is=tUXvvwHKRMf8MZIL
+	
+ **/
+
+ /** End of Author: Rúbia Lana **/
+
+
+ 
+ /* =================================================
+		Student: Matheus Borges Mota Reis 
+
+		Pages owned: 
+		- index.html (Home)
+		- resources.html (Resources)
+
+		Pattern:
+		- Global tokens + base styles
+		- Home-specific: .page-home...
+		- Resources-specific: .page-resources...
+		- Reusable components: .mt-*
+   ================================================= */
+
+/* ------------------- Tokens ------------------- */
+
+:root {
+	/* SDG 4 colour family */
+	--mt-sdg4: #C5192D;
+	--mt-sdg4-dark: #8f1223;
+	--mt-sdg4-soft: #fbe7ea;
+
+	/* Neutral greys */
+	--mt-gray-900: #111111;
+	--mt-gray-700: #4a4a4a;
+
+	/* Reusable radius & shadow*/
+	--mt-radius-lg: 1rem;
+	--mt-shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+	/* Wheel size (desktop) */
+	--mt-wheel-size: 32rem;
+}
+
+/* ------------------- Base & Typography ------------------- */
+
+.mtBody{
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	color: var(--mt-gray-900);
+	background-color: #fff;
+}
+
+/* Main page heading */
+.mt-main-heading{
+	font-family: "Anton", sans-serif;
+	line-height: 1.1;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+}
+
+/* Reusable button */
+.mt-btn{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 1.5px solid var(--mt-sdg4);
+	background-color: var(--mt-sdg4);
+	color: #fff;
+	font-size: 0.8rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	text-decoration: none;
+	padding: 0.75rem 1.8rem;
+	transition: 
+		background-color 0.2s ease,
+		border-color 0.2s ease,
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.mt-btn:hover,
+.mt-btn:focus-visible{
+	background-color: rgba(0, 0, 0, 0.25);
+	border-color: var(--mt-sdg4);
+	color: #fff;
+	transform: translateY(-1px);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+	outline: none;
+}
+
+.mt-btn:active{
+	transform: translateY(0);
+	box-shadow: 0 5px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Larger button */
+.mt-btn-large{
+	padding: 0.9rem 2.5rem;
+}
+
+/* Full-width button */
+.mt-btn-full{
+	width: 100%;
+}
+
+/* Wheels labels */
+.mt-wheel-label{
+	font-family: "Anton", sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
 	text-align: center;
 }
 
-.target {
-	background-color: pink;
+/* ------------------- Layout base ------------------- */
+
+.mtBody *,
+.mtBody *::before,
+.mtBody *::after{
+box-sizing: border-box;
+}
+
+.mt-main-body{
+	margin: 0;
+	padding: 0;
+}
+
+/* =========================== HOME PAGE: Hero =========================== */
+
+.page-home .mt-hero-sdg4{
+	position: relative;
+	min-height: 70vh;
+	display: flex;
+	align-items: center;
+	background-image: 
+		linear-gradient(120deg, rgba(0, 0, 0, 0.6), 
+		rgba(0, 0, 0, 0.3)), 
+		url("../img/matheus/childrenPlaying.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-bottom: 8rem;
+	z-index: 1;
+}
+
+/* Ensure hero heading is white */
+.page-home .mt-hero-sdg4 h1{
+	color: #ffffff;
+}
+
+/* Intro text in hero */
+.page-home .mt-hero-txt{
+	color: #ffffff;
+	opacity: 0.7;
+	max-width: 32rem;
+}
+
+/* Eyebrow label above H1 in hero */
+.page-home .mt-hero-eyebrow{
+	font-size: 0.85rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	color: #fff;
+	display: inline-block;
+	padding: 0.35rem 0.75rem;
+	border-radius: 999px;
+}
+
+/* Any heading inside home page */
+.page-home h1,
+.page-home h2,
+.page-home h3{
+	font-family: "Anton",sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+/* Wheel overlaying hero + next section */
+.page-home .mt-wheel-section{
+	position: static;
+	right: 4%;
+	bottom: 0rem;
+	z-index: 10;
+}
+
+/* ===========================  HOME PAGE: WHEEL ===========================  */
+/* --------- Idea adapted from COdePen example by Felipe Mendez: 
+	 https://codepen.io/felipemendez/pen/nqMaKY?editors=1100 --------- */
+
+/* Wheel container */
+.mt-sdg-wheel{
+	position: relative;
+	width: var(--mt-wheel-size); 				
+	height: var(--mt-wheel-size);
+}
+
+/* Center the label inside the wheel */
+.mt-sdg-wheel-center{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* moves its own center to that position */
+	text-align: center;
+	color: #fff;
+	padding: 1rem 1.5rem;
+	border-radius: 999px;
+	background-color: transparent;
+}
+
+/* UL: Circular orbit */
+.mt-sdg-wheel-orbit{
+	position: relative;
+	overflow: hidden;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	animation: mtWheelSpin 40s linear infinite; 
+	transform-origin: 50% 50%;
+}
+
+/* LI: slices */
+.mt-sdg-wheel-orbit li{
+	position: absolute;
+	overflow: hidden;
+	left: 50%;
+	top: 50%;
+
+	margin-left: calc(-1 * var(--mt-wheel-size) / 2);
+	margin-top: calc(-1 * var(--mt-wheel-size) / 2);
+
+	width: calc(var(--mt-wheel-size) / 2);
+	height: calc(var(--mt-wheel-size) / 2);
+
+	transform-origin: 100% 100%;
+}
+
+/* A: content inside slice */
+.mt-sdg-wheel-orbit li .mt-sdg-wheel-item{
+	transform: skew(-50deg) rotate(-70deg) scale(1);
+
+	color: #fff;
+	line-height: 14px;
+	text-transform: capitalize;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 3em;
+	position: absolute;
+
+	width: var(--mt-wheel-size);
+	height: var(--mt-wheel-size);
+
+	margin-left: calc(-1 * var(--mt-wheel-size) / 4);
+
+	left: 50%;
+	top: 0;
+
+	/* interactivity */
+	cursor: pointer;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease,
+		filter 0.2s ease;
+}
+
+/* On hover: highlight the slice */
+.mt-sdg-wheel-orbit li .mt-sdg-wheel-item:hover,
+.mt-sdg-wheel-orbit li .mt-sdg-wheel-item:focus-visible{
+	transform: skew(-50deg) rotate(-70deg) scale(1.06);
+	box-shadow: 
+		0 0 0 4px #ffffff,
+		0 10px 25px rgba(0,0,0,0.45);
+	filter: brightness(1.15);
+}
+
+/* On click: feedback */
+.mt-sdg-wheel-orbit li .mt-sdg-wheel-item:active{
+	transform: skew(-50deg) rotate(-70deg) scale(0.98);
+	box-shadow: 
+		0 0 0 4px #ffffff,
+		0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* Keyframes for the slow spin of the whole wheel */
+@keyframes mtWheelSpin{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+
+/* =========================== HOME PAGE: What's SDG4? =========================== */
+
+.page-home .mt-section-sdg4{
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	padding-block: 3.5rem;
+	background-color: #ffffff;
+}
+
+.page-home .mt-section-sdg4 h2{
+	font-size: 2.1rem;
+	margin-bottom: 0.75rem;
+}
+
+/* Small label above heading */
+.mt-section-eyebrow{
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.16em;
+	color: var(--mt-sdg4);
+	margin-bottom: 0.35rem;
+}
+
+.page-home .mt-section-sdg4 p,
+.mt-section-body{
+	color: var(--mt-gray-700);
+	font-size: 0.97rem;
+	line-height: 1.8;
+}
+
+/* Bullet list */
+.mt-section-list{
+	padding-left: 1.2rem;
+	margin-bottom: 1.5rem;
+}
+
+.mt-section-list li{
+	color: var(--mt-gray-700);
+	font-size: 0.95rem;
+	line-height: 1.7;
+	margin-bottom: 0.4rem;
+}
+
+/* card that wraps the image + button */
+.mt-section-card{
+	background-color: #ffffff;
+	border-radius: var(--mt-radius-lg);
+	box-shadow: var(--mt-shadow-soft);
+	padding: 0.75rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.mt-section-lead{
+	font-size: 1.02rem;
+	font-weight: 600;
+	color: #222;
+	margin-bottom: 1rem;
+}
+
+/* Image of student */
+.mt-sdg4-img{
+	display: block;
+	width: 100%;
+	height: auto;
+	filter: brightness(0.9);
+}
+
+/* CTA Button */
+.mt-img-cta-btn{
+	margin-top: 1rem;
+}
+
+/* =========================== HOME PAGE: Stastitic =========================== */
+
+.mt-statistic-strip{
+	background: radial-gradient(
+		circle at top left, 
+		var(--mt-gray-700) 0%, 
+		#111111 45%, 
+		#000000 100%
+	);
+	color: #fff;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+}
+
+.mt-statistic-number{
+	font-size: 3rem;
+	letter-spacing: 0.06em;
+}
+
+.mt-statistic-txt{
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 0.95rem;
+	line-height: 1.7;
+	margin: 0.75rem 0 0.5rem;
+}
+
+.mt-statistic-link{
+	display: inline-block;
+	color: #fff;
+	font-size: 0.85rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	font-weight: 600;
+	opacity: 0.8;
+}
+
+.mt-statistic-link:hover,
+.mt-statistic-link:focus{
+	opacity: 1;
+	text-decoration: underline;
+}
+
+/* =========================== HOME PAGE: Targets =========================== */
+
+.page-home .mt-section-targets{
+	background-color: #fafafa;
+	border-radius: var(--mt-radius-lg);
+	padding-inline: 1.5rem;
+	padding-block: 2.5rem;
+}
+
+.page-home .mt-section-targets > h3{
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+/* Card that wraps each target img */
+.mt-target-card{
+	background-color: #ffffff;
+	border-radius: var(--mt-radius-lg);
+	box-shadow: var(--mt-shadow-soft);
+	padding: 0.75rem;
+}
+
+/* Label "Target 4.1" etc. */
+.mt-target-label{
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	color: var(--mt-sdg4);
+	margin-bottom: 0.2rem;
+}
+
+/* Short Summary */
+.mt-target-summary{
+	font-size: 1.2rem;
+	margin-bottom: 0.75rem;
+}
+
+/* List under each target */
+.mt-target-list{
+	padding-left: 1.1rem;
+	margin-bottom: 0;
+}
+
+.mt-target-list li{
+	color: var(--mt-gray-700);
+	font-size: 0.93rem;
+	line-height: 1.7;
+	margin-bottom: 0.35rem;
+}
+
+/* Divider between targets */
+.page-home .mt-target{
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.page-home .mt-target:last-of-type{
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+/* Text */
+
+.page-home .mt-target h3{
+	font-weight: 700;
+	margin-bottom: 0.75rem;
+}
+
+.page-home .mt-target p{
+	color: var(--mt-gray-700);
+	line-height: 1.7;
+	font-size: 0.95rem;
+}
+
+
+/* =========================== RESOURCES =========================== */
+
+/* Keep the heading bold */
+.page-resources h1,
+.page-resources h2,
+.page-resources h3{
+	font-family: "Anton",sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+/* Base background */
+.page-resources{
+	background-color: #ffffff;
+}
+
+/* Centred Column */
+.page-resources .mt-resources-main{
+	max-width: 1140px;
+	margin-inline: auto;
+}
+
+/* Hero h1 headings */
+
+.page-resources .mt-resources-main h1{
+	font-family: "Anton", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	font-size: 2.25rem;
+}
+
+/* Paragraph colour */
+.page-resources .mt-resources-main p{
+	color: var(--mt-gray-700);
+	font-size: 0.95rem;
+}
+
+/* Search bar */
+
+.page-resources .mt-resources-main .input-group .form-control{
+	border-radius: 999px 0 0 999px;
+	border-color: #ddd;
+}
+
+.page-resources .mt-resources-main .input-group-text{
+	border-radius: 0 999px 999px 0;
+	border-color: #ddd;
+}
+
+/* Grid Cards */
+.page-resources .mt-resource-card{
+	border-radius: var(--mt-radius-lg);
+	box-shadow: var(--mt-shadow-soft);
+	border: 1px solid #f0f0f0;
+	background-color: #ffffff;
+	padding: 1.25rem;
+}
+
+.mt-card-img{
+	background-color: #ffffff;
+}
+
+/* Trusted websites section */
+
+.page-resources .border-top.border-2{
+	border-color: var(--mt-sdg4);
+	opacity: 0.7;
+}
+
+/* Eyebrow (reused from home) */
+.page-resources .mt-section-eyebrow{
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.16em;
+	color: var(--mt-sdg4);
+}
+
+/* Card headings (links) */
+.page-resources .mt-resource-card h3{
+	font-size: 1rem;
+	font-weight: 700;
+	margin-top: 0.9rem;
+}
+
+/* Links */
+.page-resources .mt-resource-link{
+	font-size: 0.85rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	text-decoration: none;
+	color: var(--mt-sdg4);
+}
+
+.page-resources .mt-resource-link:hover{
+	text-decoration: underline;
+}
+
+/* Check box label when checked */
+.page-resources #resourceAgree:checked + label{
+	font-weight: 600;
+}
+
+/* Submit button */
+.page-resources button[type="submit"]{
+	background-color: var(--mt-gray-900);
+	border-color: var(--mt-gray-900);
+}
+
+.page-resources button[type="submit"]:hover{
+	background-color: var(--mt-sdg4-dark);
+	border-color: var(--mt-sdg4-dark);
+}
+
+/* Trusted websites */
+.page-resources .mt-trusted-card{
+	background-color: #ffffff;
+	border-radius: var(--mt-radius-lg);
+	box-shadow: var(--mt-shadow-soft);
+	padding: 1.25rem;
+	margin-bottom: 2rem;
+}
+
+.page-resources .mt-trusted-media{
+	flex: 0 0 100%;
+}
+
+.page-resources .mt-trusted-body{
+	flex: 1;
+}
+
+.page-resources #trusted-platforms h3{
+	font-size: 1.3rem;
+	line-height: 1.3;
+	margin-bottom: 0.4rem;
+}
+
+.page-resources #trusted-platforms p{
+	font-size: 1rem;
+	line-height: 1.6;
+	margin-bottom: 32rem;
+}
+
+/* Form */
+
+.mt-input-control .error {
+	color: #dc3545;
+	font-size: 0.8rem;
+	margin-top: 0.25rem;
+	min-height: 1rem;
+}
+
+.mt-input-control.error .form-control,
+.mt-input-control.error textarea {
+	border-color: #dc3545;
+}
+
+.mt-input-control.success .form-control,
+.mt-input-control.success textarea {
+	border-color: #198754;
+}
+
+.form-check .error{
+	color: #dc3545;
+	font-size: 0.8rem;
+	margin-top: 0.25rem;
+	min-height: 1rem;
+	display: block;
+}
+
+.form-check.error .form-check-input{
+	outline: 1px solid #dc3545;
+}
+
+/* ============================ BACK TO TOP BUTTON ============================ */
+
+.mt-back-to-top{
+	position: fixed;
+	right: 1.5rem;
+	bottom: 1.5rem;
+	width: 2.75rem;
+	height: 2.75rem;
+	border-radius: 50%;
+	border: none;
+	background-color: var(--mt-sdg4);
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1rem;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+	cursor: pointer;
+	z-index: 999;
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(10px);
+	transition: 
+		opacity 0.2s ease,
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.mt-back-to-top.show{
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateY(0);
+}
+
+.mt-back-to-top:hover,
+.mt-back-to-top:focus-visible{
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ============================ RESPONSIVE ============================ */
+/* MOBILE: phones */
+@media (max-width: 576px){
+
+	/* General layout tweaks */
+	*,
+	*::before,
+	*::after{
+		box-sizing: border-box;
+	}
+
+	.mt-main-body{
+		margin: 0;
+		padding: 0;
+	}
+
+	/* Keep the content away from edges a bit */
+	.page-resources .mt-resources-main, 
+	.page-home .container{
+		padding-inline: 0.75rem;
+	}
+
+	/* Hero */
+	.page-home .mt-hero-sdg4{
+		min-height: auto; 							/* don't force tall hero on phone */
+		padding-block: 3rem 2rem;				/* more breathing room */
+		text-align: left;								
+	}
+
+	.page-home .mt-hero-txt{
+		max-width: 100%;
+	}
+
+	/* Wheel */
+/*	.mt-sdg-wheel{
+		display: none;
+	}
+
+	.mt-sdg-wheel-center{
+		display: none;
+	}*/
+
+
+	/* Buttons */
+	.page-home .mt-btn,
+	.page-resources .mt-btn{
+		display: block;
+		width: 100%;
+		margin-left: 0;
+	}
+
+	/* Resources */
+	.page-resources .mt-resources-main{
+		padding-inline: 0.5rem;
+	}
 }
